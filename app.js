@@ -278,42 +278,45 @@ function triggerGmailApp(subject = '', body = '') {
 window.triggerGmailApp = triggerGmailApp;
 
 /* ------------------------------------------
-   7. Functional Contact Form & Direct Gmail App Trigger
+   7. Functional Contact Form & Real Mailto Link Updater
    ------------------------------------------ */
 function initContactForm() {
-  const form = document.getElementById('contact-form');
-  const sendBtn = document.getElementById('send-msg-btn');
-  if (!form) return;
+  const nameEl = document.getElementById('contact-name');
+  const emailEl = document.getElementById('contact-email');
+  const msgEl = document.getElementById('contact-message');
+  const sendLink = document.getElementById('send-msg-link');
 
-  function handleSend(e) {
-    if (e) e.preventDefault();
+  if (!sendLink) return;
 
-    const name = document.getElementById('contact-name').value.trim();
-    const email = document.getElementById('contact-email').value.trim();
-    const message = document.getElementById('contact-message').value.trim();
+  function updateMailtoHref() {
+    const name = nameEl ? nameEl.value.trim() : '';
+    const email = emailEl ? emailEl.value.trim() : '';
+    const message = msgEl ? msgEl.value.trim() : '';
 
-    if (!name || !email || !message) {
-      showToast('Please fill out all required fields.');
-      return;
+    let subject = 'Portfolio Inquiry for Adithya V';
+    if (name) subject = `Portfolio Inquiry from ${name}`;
+
+    let body = '';
+    if (name || email || message) {
+      body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
     }
 
-    const timestamp = new Date().toLocaleString();
-    const messages = JSON.parse(localStorage.getItem('contact_messages') || '[]');
-    messages.push({ name, email, message, timestamp });
-    localStorage.setItem('contact_messages', JSON.stringify(messages));
+    const encodedSub = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(body);
 
-    const subject = `Portfolio Inquiry from ${name}`;
-    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-
-    // Execute exact same native Gmail app trigger as the email link
-    triggerGmailApp(subject, body);
-    showToast(`Opening Gmail App for ${name}...`);
+    sendLink.href = `mailto:adithya210207.v@gmail.com?subject=${encodedSub}&body=${encodedBody}`;
   }
 
-  form.addEventListener('submit', handleSend);
-  if (sendBtn) {
-    sendBtn.addEventListener('click', handleSend);
-  }
+  if (nameEl) nameEl.addEventListener('input', updateMailtoHref);
+  if (emailEl) emailEl.addEventListener('input', updateMailtoHref);
+  if (msgEl) msgEl.addEventListener('input', updateMailtoHref);
+
+  sendLink.addEventListener('click', () => {
+    updateMailtoHref();
+    showToast('Opening Gmail App...');
+  });
+
+  updateMailtoHref();
 }
 
 function showToast(message) {
