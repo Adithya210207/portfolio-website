@@ -265,12 +265,11 @@ function triggerGmailApp(subject = '', body = '') {
   } else if (isIOS) {
     // iOS Gmail App Scheme
     window.location.href = `googlegmail:///co?to=${to}&subject=${sub}&body=${bdy}`;
-    // Fallback to mailto scheme if Gmail app not installed
     setTimeout(() => {
       window.location.href = `mailto:${to}?subject=${sub}&body=${bdy}`;
     }, 400);
   } else {
-    // Fallback for Desktop
+    // Desktop Fallback
     window.location.href = `mailto:${to}?subject=${sub}&body=${bdy}`;
   }
 }
@@ -279,14 +278,15 @@ function triggerGmailApp(subject = '', body = '') {
 window.triggerGmailApp = triggerGmailApp;
 
 /* ------------------------------------------
-   7. Functional Contact Form Handler
+   7. Functional Contact Form & Direct Gmail App Trigger
    ------------------------------------------ */
 function initContactForm() {
   const form = document.getElementById('contact-form');
+  const sendBtn = document.getElementById('send-msg-btn');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  function handleSend(e) {
+    if (e) e.preventDefault();
 
     const name = document.getElementById('contact-name').value.trim();
     const email = document.getElementById('contact-email').value.trim();
@@ -305,10 +305,15 @@ function initContactForm() {
     const subject = `Portfolio Inquiry from ${name}`;
     const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
+    // Execute exact same native Gmail app trigger as the email link
     triggerGmailApp(subject, body);
     showToast(`Opening Gmail App for ${name}...`);
-    form.reset();
-  });
+  }
+
+  form.addEventListener('submit', handleSend);
+  if (sendBtn) {
+    sendBtn.addEventListener('click', handleSend);
+  }
 }
 
 function showToast(message) {
