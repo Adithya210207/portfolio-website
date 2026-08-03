@@ -273,13 +273,22 @@ function initContactForm() {
     messages.push({ name, email, message, timestamp });
     localStorage.setItem('contact_messages', JSON.stringify(messages));
 
-    // Open direct Gmail compose in a new browser tab
-    const gmailSubject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-    const gmailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=adithya210207.v@gmail.com&su=${gmailSubject}&body=${gmailBody}`;
-    window.open(gmailUrl, '_blank');
+    // Detect mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
 
-    showToast(`Thank you, ${name}! Gmail compose opened in a new tab.`);
+    const emailSubject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+    const emailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+    if (isMobile) {
+      // On mobile phones: launch native Gmail / Mail app directly
+      window.location.href = `mailto:adithya210207.v@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+      showToast(`Opening Gmail app on your phone...`);
+    } else {
+      // On desktop: open Gmail Web compose in a new tab
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=adithya210207.v@gmail.com&su=${emailSubject}&body=${emailBody}`;
+      window.open(gmailUrl, '_blank');
+      showToast(`Thank you, ${name}! Gmail compose opened in a new tab.`);
+    }
     form.reset();
   });
 }
