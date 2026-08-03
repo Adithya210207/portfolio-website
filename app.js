@@ -260,15 +260,8 @@ function formatMailtoUrl(subject, body) {
   return `mailto:${to}?subject=${cleanSub}&body=${cleanBody}`;
 }
 
-function launchMailtoApp(subject, body) {
-  const mailtoUrl = formatMailtoUrl(subject, body);
-  window.location.href = mailtoUrl;
-}
-
-window.launchMailtoApp = launchMailtoApp;
-
 /* ------------------------------------------
-   7. Functional Contact Form & Instant Mailto Launch
+   7. Strict Form Validation & Gmail App Launcher
    ------------------------------------------ */
 function initContactForm() {
   const nameEl = document.getElementById('contact-name');
@@ -278,41 +271,49 @@ function initContactForm() {
 
   if (!sendLink) return;
 
-  function buildFormSubjectAndBody() {
+  function validateInputs() {
     const name = nameEl ? nameEl.value.trim() : '';
     const email = emailEl ? emailEl.value.trim() : '';
     const message = msgEl ? msgEl.value.trim() : '';
 
-    const subject = name ? `Portfolio Inquiry from ${name}` : 'Portfolio Inquiry for Adithya V';
-    
-    let body = '';
-    if (name || email || message) {
-      body = `Name: ${name || 'N/A'}\nSender Email: ${email || 'N/A'}\n\nMessage:\n${message || 'N/A'}`;
-    }
+    const isNameValid = name.length > 0;
+    const isEmailValid = email.length > 0 && email.includes('@') && email.indexOf('@') > 0 && email.indexOf('@') < email.length - 1;
+    const isMsgValid = message.length > 0;
 
-    return { subject, body, name, email, message };
+    return {
+      isValid: isNameValid && isEmailValid && isMsgValid,
+      isNameValid,
+      isEmailValid,
+      isMsgValid,
+      name,
+      email,
+      message
+    };
   }
-
-  function syncHref() {
-    const { subject, body } = buildFormSubjectAndBody();
-    sendLink.href = formatMailtoUrl(subject, body);
-  }
-
-  if (nameEl) nameEl.addEventListener('input', syncHref);
-  if (emailEl) emailEl.addEventListener('input', syncHref);
-  if (msgEl) msgEl.addEventListener('input', syncHref);
 
   sendLink.addEventListener('click', (e) => {
-    e.preventDefault();
+    const validation = validateInputs();
 
-    const { subject, body, name } = buildFormSubjectAndBody();
-    const mailtoUrl = formatMailtoUrl(subject, body);
+    if (!validation.isValid) {
+      e.preventDefault(); // Stop navigation if validation fails
+      
+      if (!validation.isNameValid) {
+        showToast('Please enter your name.');
+      } else if (!validation.isEmailValid) {
+        showToast('Please enter a valid email address containing @');
+      } else if (!validation.isMsgValid) {
+        showToast('Please enter a message.');
+      }
+      return false;
+    }
 
-    showToast(name ? `Opening Gmail App for ${name}...` : 'Opening Gmail App...');
-    window.location.href = mailtoUrl;
+    // When valid: format mailto URL with pre-filled fields & CRLF newlines
+    const subject = `Portfolio Inquiry from ${validation.name}`;
+    const body = `Name: ${validation.name}\nSender Email: ${validation.email}\n\nMessage:\n${validation.message}`;
+    
+    sendLink.href = formatMailtoUrl(subject, body);
+    showToast(`Opening Gmail App for ${validation.name}...`);
   });
-
-  syncHref();
 }
 
 function showToast(message) {
