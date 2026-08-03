@@ -249,7 +249,37 @@ function initSearchAndFilter() {
 }
 
 /* ------------------------------------------
-   6. Functional Contact Form Handler
+   6. Native Mobile Gmail App Launcher
+   ------------------------------------------ */
+function triggerGmailApp(subject = '', body = '') {
+  const to = 'adithya210207.v@gmail.com';
+  const sub = encodeURIComponent(subject);
+  const bdy = encodeURIComponent(body);
+
+  const isAndroid = /Android/i.test(navigator.userAgent);
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if (isAndroid) {
+    // Direct Android Intent for package com.google.android.gm (Gmail App)
+    window.location.href = `intent://co?to=${to}&subject=${sub}&body=${bdy}#Intent;scheme=googlegmail;package=com.google.android.gm;end`;
+  } else if (isIOS) {
+    // iOS Gmail App Scheme
+    window.location.href = `googlegmail:///co?to=${to}&subject=${sub}&body=${bdy}`;
+    // Fallback to mailto scheme if Gmail app not installed
+    setTimeout(() => {
+      window.location.href = `mailto:${to}?subject=${sub}&body=${bdy}`;
+    }, 400);
+  } else {
+    // Fallback for Desktop
+    window.location.href = `mailto:${to}?subject=${sub}&body=${bdy}`;
+  }
+}
+
+// Global helper for inline HTML clicks
+window.triggerGmailApp = triggerGmailApp;
+
+/* ------------------------------------------
+   7. Functional Contact Form Handler
    ------------------------------------------ */
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -267,28 +297,16 @@ function initContactForm() {
       return;
     }
 
-    // Save message locally for reference
     const timestamp = new Date().toLocaleString();
     const messages = JSON.parse(localStorage.getItem('contact_messages') || '[]');
     messages.push({ name, email, message, timestamp });
     localStorage.setItem('contact_messages', JSON.stringify(messages));
 
-    // Detect mobile device
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+    const subject = `Portfolio Inquiry from ${name}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
 
-    const emailSubject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-    const emailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-
-    if (isMobile) {
-      // On mobile phones: launch native Gmail / Mail app directly
-      window.location.href = `mailto:adithya210207.v@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-      showToast(`Opening Gmail app on your phone...`);
-    } else {
-      // On desktop: open Gmail Web compose in a new tab
-      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=adithya210207.v@gmail.com&su=${emailSubject}&body=${emailBody}`;
-      window.open(gmailUrl, '_blank');
-      showToast(`Thank you, ${name}! Gmail compose opened in a new tab.`);
-    }
+    triggerGmailApp(subject, body);
+    showToast(`Opening Gmail App for ${name}...`);
     form.reset();
   });
 }
@@ -308,7 +326,7 @@ function showToast(message) {
 }
 
 /* ------------------------------------------
-   7. Interactive Credential Detail Modal Map
+   8. Interactive Credential Detail Modal Map
    ------------------------------------------ */
 const certModalDetails = {
   axiswin: {
@@ -434,7 +452,7 @@ const certModalDetails = {
     date: 'Declared: 13/05/2025',
     desc: 'Official Marks Statement Cum Certificate for ADITHYA V (Roll No. 20670959) from SSVM School of Excellence Coimbatore TN.',
     details: `
-      <div><strong>Computer Science (083):</strong> 099 / 100 (A1)</div>
+      <div><strong>Computer Science (083):</strong> 99 / 100 (A1)</div>
       <div><strong>Mathematics (041):</strong> 093 / 100 (A1)</div>
       <div><strong>English Core (301):</strong> 091 / 100 (A2)</div>
       <div><strong>Physics (042):</strong> 086 / 100 (A1) | <strong>Chemistry (043):</strong> 081 / 100 (A2)</div>
