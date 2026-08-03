@@ -249,36 +249,26 @@ function initSearchAndFilter() {
 }
 
 /* ------------------------------------------
-   6. Native Mobile Gmail App Launcher
+   6. Native Mobile & Desktop Mailto Builder
    ------------------------------------------ */
-function triggerGmailApp(subject = '', body = '') {
+function formatMailtoUrl(subject, body) {
   const to = 'adithya210207.v@gmail.com';
-  const sub = encodeURIComponent(subject);
-  const bdy = encodeURIComponent(body);
+  // Use %0D%0A (CRLF) for guaranteed newline parsing in Gmail App on Android/iOS
+  const cleanSub = encodeURIComponent(subject || 'Portfolio Inquiry for Adithya V').replace(/%0A/g, '%0D%0A');
+  const cleanBody = encodeURIComponent(body || '').replace(/%0A/g, '%0D%0A');
 
-  const isAndroid = /Android/i.test(navigator.userAgent);
-  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-  if (isAndroid) {
-    // Direct Android Intent for package com.google.android.gm (Gmail App)
-    window.location.href = `intent://co?to=${to}&subject=${sub}&body=${bdy}#Intent;scheme=googlegmail;package=com.google.android.gm;end`;
-  } else if (isIOS) {
-    // iOS Gmail App Scheme
-    window.location.href = `googlegmail:///co?to=${to}&subject=${sub}&body=${bdy}`;
-    setTimeout(() => {
-      window.location.href = `mailto:${to}?subject=${sub}&body=${bdy}`;
-    }, 400);
-  } else {
-    // Desktop Fallback
-    window.location.href = `mailto:${to}?subject=${sub}&body=${bdy}`;
-  }
+  return `mailto:${to}?subject=${cleanSub}&body=${cleanBody}`;
 }
 
-// Global helper for inline HTML clicks
-window.triggerGmailApp = triggerGmailApp;
+function launchMailtoApp(subject, body) {
+  const mailtoUrl = formatMailtoUrl(subject, body);
+  window.location.href = mailtoUrl;
+}
+
+window.launchMailtoApp = launchMailtoApp;
 
 /* ------------------------------------------
-   7. Functional Contact Form & Real Mailto Link Updater
+   7. Functional Contact Form & Instant Mailto Launch
    ------------------------------------------ */
 function initContactForm() {
   const nameEl = document.getElementById('contact-name');
@@ -288,35 +278,41 @@ function initContactForm() {
 
   if (!sendLink) return;
 
-  function updateMailtoHref() {
+  function buildFormSubjectAndBody() {
     const name = nameEl ? nameEl.value.trim() : '';
     const email = emailEl ? emailEl.value.trim() : '';
     const message = msgEl ? msgEl.value.trim() : '';
 
-    let subject = 'Portfolio Inquiry for Adithya V';
-    if (name) subject = `Portfolio Inquiry from ${name}`;
-
+    const subject = name ? `Portfolio Inquiry from ${name}` : 'Portfolio Inquiry for Adithya V';
+    
     let body = '';
     if (name || email || message) {
-      body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+      body = `Name: ${name || 'N/A'}\nSender Email: ${email || 'N/A'}\n\nMessage:\n${message || 'N/A'}`;
     }
 
-    const encodedSub = encodeURIComponent(subject);
-    const encodedBody = encodeURIComponent(body);
-
-    sendLink.href = `mailto:adithya210207.v@gmail.com?subject=${encodedSub}&body=${encodedBody}`;
+    return { subject, body, name, email, message };
   }
 
-  if (nameEl) nameEl.addEventListener('input', updateMailtoHref);
-  if (emailEl) emailEl.addEventListener('input', updateMailtoHref);
-  if (msgEl) msgEl.addEventListener('input', updateMailtoHref);
+  function syncHref() {
+    const { subject, body } = buildFormSubjectAndBody();
+    sendLink.href = formatMailtoUrl(subject, body);
+  }
 
-  sendLink.addEventListener('click', () => {
-    updateMailtoHref();
-    showToast('Opening Gmail App...');
+  if (nameEl) nameEl.addEventListener('input', syncHref);
+  if (emailEl) emailEl.addEventListener('input', syncHref);
+  if (msgEl) msgEl.addEventListener('input', syncHref);
+
+  sendLink.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const { subject, body, name } = buildFormSubjectAndBody();
+    const mailtoUrl = formatMailtoUrl(subject, body);
+
+    showToast(name ? `Opening Gmail App for ${name}...` : 'Opening Gmail App...');
+    window.location.href = mailtoUrl;
   });
 
-  updateMailtoHref();
+  syncHref();
 }
 
 function showToast(message) {
