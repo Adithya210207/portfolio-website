@@ -336,17 +336,17 @@ body {
 
 .hero-stats {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr 1.4fr 1fr;
   align-items: flex-start;
-  gap: 2.5rem;
+  gap: 2rem;
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-glass);
-  max-width: 780px;
+  max-width: 750px;
 }
 
 .stat-item h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--text-main);
 }
