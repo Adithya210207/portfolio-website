@@ -335,23 +335,27 @@ body {
 }
 
 .hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
   margin-top: 4rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-glass);
+  max-width: 750px;
 }
 
 .stat-item h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--text-main);
+  white-space: nowrap;
 }
 
 .stat-item p {
   font-size: 0.875rem;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* Section Header */
