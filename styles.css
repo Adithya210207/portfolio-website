@@ -335,9 +335,8 @@ body {
 }
 
 .hero-stats {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 4rem;
   padding-top: 2rem;
@@ -346,7 +345,7 @@ body {
 }
 
 .stat-item h3 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--text-main);
   white-space: nowrap;
