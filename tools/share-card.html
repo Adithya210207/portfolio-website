@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share card</title>
+<!-- Source for img/share.jpg (1200x630). Render: open at 1200x630 and screenshot, or run headless Chrome with --window-size=1200,630 --screenshot. -->
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: #f4f1ea; color: #171614; }
+  body { position: relative; font: 400 22px/1.4 Inter, system-ui, sans-serif; }
+  .wrap { position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 360px; }
+  .text { padding: 64px 0 56px 72px; display: flex; flex-direction: column; }
+  .kicker { font-size: 16px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: #7b766d; }
+  h1 { margin-top: auto; font: 400 172px/.86 "Instrument Serif", Georgia, serif; letter-spacing: -.035em; }
+  h1 em { color: #a04c2a; }
+  .line { margin-top: 30px; max-width: 600px; font: 400 36px/1.22 "Instrument Serif", Georgia, serif; color: #2a2825; }
+  .line em { color: #a04c2a; }
+  .foot { margin-top: 40px; display: flex; gap: 28px; font-size: 18px; color: #45423d; }
+  .foot b { font-weight: 500; color: #171614; }
+  .photo { position: relative; overflow: hidden; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; filter: grayscale(.15) contrast(1.02); }
+  .photo::after { content: ""; position: absolute; inset: 0; box-shadow: inset 1px 0 0 rgba(23,22,20,.14); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="text">
+    <p class="kicker">Portfolio · Computer science, KCT</p>
+    <h1>Adithya <em>V.</em></h1>
+    <p class="line">I fine-tune language models and ship them as <em>private, offline</em> apps.</p>
+    <p class="foot"><span><b>5</b> models on Hugging Face</span><span><b>8</b> projects shipped</span><span>adithya210207.github.io</span></p>
+  </div>
+  <div class="photo"><img src="../img/portrait.jpg" alt=""></div>
+</div>
+</body>
+</html>
