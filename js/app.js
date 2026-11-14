@@ -99,8 +99,13 @@
     // on wide screens the subtitle tucks up under the baseline of "Adith" (no descenders there),
     // measured from a zero-size marker sitting on the name's baseline
     const title = $('.hero__title'), base = $('.hero__base');
+    const nameBox = fit.parentElement;
     const setSize = s => {
       fit.style.fontSize = s.toFixed(2) + 'px';
+      // room below the baseline for the "y" tail while the rise mask clips the name;
+      // padding and margin cancel out, so the layout below does not move
+      nameBox.style.paddingBottom = (s * .34).toFixed(1) + 'px';
+      nameBox.style.marginBottom = (6 - s * .34).toFixed(1) + 'px';
       if (!wide) return mastEl.style.removeProperty('--sub-pull');
       const cur = parseFloat(mastEl.style.getPropertyValue('--sub-pull')) || 0;
       const natural = title.offsetTop - cur, want = base.offsetTop + s * .07;
