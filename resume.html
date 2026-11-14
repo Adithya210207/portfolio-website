@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Adithya V — Résumé</title>
+<!-- Source for resume.pdf. Edit this file, then re-export it to PDF (print to PDF, A4, no headers/footers). -->
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #fff; }
+body { width: 210mm; height: 297mm; padding: 15mm 16mm 13mm; font: 400 9.2pt/1.45 Inter, Arial, sans-serif; color: #2a2825; }
+em { font-style: italic; color: #a04c2a; }
+a { color: inherit; text-decoration: none; }
+.head { display: flex; justify-content: space-between; align-items: flex-end; gap: 10mm; padding-bottom: 4mm; border-bottom: 1px solid #171614; }
+h1 { font: 400 38pt/.9 "Instrument Serif", Georgia, serif; letter-spacing: -.02em; color: #171614; }
+h1 em { font-style: italic; }
+.role { margin-top: 2.2mm; font: 400 13pt/1.2 "Instrument Serif", Georgia, serif; color: #45423d; }
+.contact { text-align: right; font-size: 8.4pt; line-height: 1.6; color: #45423d; }
+.intro { display: grid; grid-template-columns: 1fr auto; gap: 8mm; align-items: start; margin-top: 4.5mm; }
+.intro p { font: 400 11.2pt/1.32 "Instrument Serif", Georgia, serif; color: #171614; }
+.seek { padding: 2mm 3.4mm; border: 1px solid #a04c2a; border-radius: 99px; font-size: 8.2pt; font-weight: 600; color: #a04c2a; white-space: nowrap; }
+.grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 9mm; margin-top: 5mm; }
+h2 { margin: 0 0 2.4mm; padding-bottom: 1.2mm; border-bottom: 1px solid #d8d4cb; font: 600 7.4pt/1 Inter, sans-serif; letter-spacing: .16em; text-transform: uppercase; color: #7b766d; }
+section + section { margin-top: 4.6mm; }
+.item + .item { margin-top: 3mm; }
+.item h3 { display: flex; justify-content: space-between; gap: 4mm; font: 600 9.6pt/1.3 Inter, sans-serif; color: #171614; }
+.item h3 span { flex: none; font-weight: 400; font-size: 8.2pt; color: #7b766d; }
+.item .sub { font-size: 8.4pt; color: #7b766d; }
+.item ul { margin-top: 1mm; padding-left: 3.6mm; }
+.item li { margin-top: .5mm; }
+.item li::marker { color: #a04c2a; }
+.kv { display: grid; gap: 1.6mm; }
+.kv b { display: block; font-weight: 600; color: #171614; }
+.list li { list-style: none; padding-left: 0; }
+.list li + li { margin-top: 1.4mm; }
+.list li span { color: #7b766d; }
+.num { font: 400 15pt/1 "Instrument Serif", Georgia, serif; color: #a04c2a; }
+</style>
+</head>
+<body>
+<header class="head">
+  <div>
+    <h1>Adithya <em>V.</em></h1>
+    <p class="role">Computer science student · AI / ML and full-stack</p>
+  </div>
+  <div class="contact">
+    <a href="mailto:adithya210207.v@gmail.com">adithya210207.v@gmail.com</a><br>
+    <a href="https://www.linkedin.com/in/adithya210207/">linkedin.com/in/adithya210207</a><br>
+    <a href="https://github.com/Adithya210207">github.com/Adithya210207</a><br>
+    <a href="https://huggingface.co/Adithya210207-Ryuu">huggingface.co/Adithya210207-Ryuu</a><br>
+    Coimbatore, India
+  </div>
+</header>
+
+<div class="intro">
+  <p>I fine-tune language models and ship them as <em>private, offline</em> apps. Five of my own models are public on Hugging Face, and I built and run my college&rsquo;s AICTE IDEA Lab website on my own.</p>
+  <span class="seek">Looking for: AI / ML and full-stack internships</span>
+</div>
+
+<div class="grid">
+  <div>
+    <section>
+      <h2>Experience</h2>
+      <div class="item">
+        <h3>Firmware Intern, Axiswin Technologies <span>Jun – Jul 2026</span></h3>
+        <ul>
+          <li>Wrote bare-metal firmware for an ARM Cortex-M4 intelligent battery monitoring application.</li>
+          <li>RTOS tasks, PWM for electric-vehicle systems, and GPIO, ADC, DAC and USART drivers.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Website builder (solo), KCT AICTE IDEA Lab <span>2026 – now</span></h3>
+        <ul>
+          <li>Designed, built and maintain idealab.kct.ac.in on my own, including its hackathon portal for problem statements, team registration and submissions.</li>
+          <li>Software builder and support for the Industry Connect Hackathon (Apr 2026) and the Smart City Hackathon with IEEE Smart Cities (Aug – Oct 2026).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected projects</h2>
+      <div class="item">
+        <h3>TQQ Chatbox <span>Java · JavaFX · Ollama · QLoRA</span></h3>
+        <ul>
+          <li>Five Llama-3 8B models, each fine-tuned with QLoRA on 700 to 890 chats built from subtitles and hand-written data; exported as GGUF and published on Hugging Face.</li>
+          <li>Offline desktop app with a phi4-mini safety judge: 69 of 70 invented memories refused, 0 of 70 false alarms; won blind tests against the untuned model, up to 83 to 11.</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Ryuu Explainer AI <span>Python · Tkinter · Ollama</span></h3>
+        <ul><li>Private desktop assistant that explains, debugs and writes code on local models, including on Intel Arc graphics via Vulkan.</li></ul>
+      </div>
+      <div class="item">
+        <h3>PawFinder <span>JavaScript · Render</span></h3>
+        <ul><li>Live adoption and rescue platform: 52 dog profiles, 18 partner shelters, emergency helplines and foster sign-up.</li></ul>
+      </div>
+      <div class="item">
+        <h3>Personality AI · Automobile Lab <span>Python · Arduino C++</span></h3>
+        <ul>
+          <li>Desktop chatbot with five personas, live streaming replies and a two-character Trio Chat.</li>
+          <li>Arduino speedometer grown over six versions into adaptive cruise control with a laser ToF sensor and Web Serial dashboard.</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <h2>Education</h2>
+      <div class="kv">
+        <div><b>BE Computer Science and Engineering</b>Kumaraguru College of Technology, Coimbatore<br><span class="sub">2025 – now · semester 3</span></div>
+        <div><b>CBSE Class XII, 2025</b>SSVM School of Excellence<br><span class="num">99</span>/100 Computer Science (school topper) · 93 Mathematics · 91 English</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="kv">
+        <div><b>AI</b>QLoRA fine-tuning, Ollama, GGUF, dataset building, prompt design, agents and MCP</div>
+        <div><b>Web</b>HTML, CSS, JavaScript, React, Node.js, Express, MongoDB</div>
+        <div><b>Firmware</b>ARM Cortex-M4, RTOS, Arduino C++, Web Serial</div>
+        <div><b>Languages</b>Python, Java, C</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certifications</h2>
+      <ul class="list">
+        <li>Google AI Essentials <span>· Google, 2025</span></li>
+        <li>Generative AI Expert; AI Automation and Agents Expert <span>· Digital Scholar</span></li>
+        <li>Traineeships in AI, Data Analytics, Full-Stack MERN and UI/UX <span>· Maiyam, 2026</span></li>
+        <li>Operating Systems <span>· Scaler Topics, 2026</span></li>
+        <li>Cambridge English, level B2 (score 167) <span>· 2024</span></li>
+        <li><span>All 26 certificates, with verify links, are on my portfolio.</span></li>
+      </ul>
+    </section>
+  </div>
+</div>
+</body>
+</html>

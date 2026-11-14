@@ -1,858 +1,284 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adithya V | Portfolio & 16 Official Verified Credentials</title>
-  <meta name="description" content="Official Portfolio & Verified Credentials of Adithya V (Reg No: 25BCS016, KCT) - Projects, Chronologically sorted certificates, Axiswin Internship, YUGAM Workshops, Maiyam Traineeships, iamneo, Cambridge B2, Google AI, Intel AI, CBSE Marks.">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adithya V — Portfolio</title>
+<meta name="description" content="Adithya V is a computer science student at KCT, Coimbatore, building private, offline AI and the web and firmware around it.">
+<meta property="og:title" content="Adithya V — Portfolio">
+<meta property="og:description" content="Private, offline AI, and the web and firmware around it.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adithya210207.github.io/">
+<meta property="og:site_name" content="Adithya V">
+<meta property="og:image" content="https://adithya210207.github.io/img/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Adithya V. I fine-tune language models and ship them as private, offline apps.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Adithya V — Portfolio">
+<meta name="twitter:description" content="Private, offline AI, and the web and firmware around it.">
+<meta name="twitter:image" content="https://adithya210207.github.io/img/share.jpg">
+<link rel="canonical" href="https://adithya210207.github.io/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Adithya V","url":"https://adithya210207.github.io/","image":"https://adithya210207.github.io/img/portrait.jpg","jobTitle":"Computer science student","description":"Fine-tunes language models and ships them as private, offline apps.","alumniOf":{"@type":"CollegeOrUniversity","name":"Kumaraguru College of Technology"},"address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressCountry":"IN"},"sameAs":["https://github.com/Adithya210207","https://huggingface.co/Adithya210207-Ryuu","https://www.linkedin.com/in/adithya210207/"]}</script>
+<meta name="theme-color" content="#f4f1ea">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem('folio-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}
+try{if(!sessionStorage.getItem('folio-welcomed')&&!matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('has-welcome');setTimeout(function(){var w=document.getElementById('welcome');if(w&&document.documentElement.classList.contains('has-welcome')&&!window.gsap){w.remove();document.documentElement.classList.remove('has-welcome')}},4000)}}catch(e){}</script>
 </head>
 <body>
+<div class="welcome" id="welcome" aria-hidden="true">
+  <div class="welcome__inner">
+    <p class="welcome__line welcome__hello"><span><em>Hello.</em></span></p>
+    <p class="welcome__line welcome__its"><span>it's me,</span></p>
+    <p class="welcome__line welcome__name"><span>Adithya <em>V.</em></span></p>
+    <span class="welcome__rule"></span>
+    <p class="label welcome__meta"><span>Portfolio</span><span>Coimbatore, 2026</span></p>
+  </div>
+</div>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- Dynamic Particle Canvas Background -->
-  <canvas id="bg-canvas"></canvas>
-
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <a href="#hero" class="nav-brand">
-      <span class="brand-dot"></span>
-      <span>Adithya<span class="text-gradient">.V</span></span>
-    </a>
-
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#hero" class="nav-link active">Home</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#certificates" class="nav-link">16 Credentials</a></li>
-      <li><a href="#academics" class="nav-link">Academics</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-
-    <div class="nav-actions">
-      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
-        <i class="fas fa-sun"></i>
-      </button>
-      <a href="https://www.linkedin.com/in/adithya210207" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
+<header class="top" id="top">
+  <a class="top__name" href="#hero">Adithya V</a>
+  <nav class="top__nav" aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <div class="top__right">
+    <a class="top__btn top__cv" href="resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    <button class="top__btn" id="theme" type="button" aria-label="Switch to dark theme">Dark</button>
+    <button class="top__btn top__menu" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
 
-  <!-- Hero Section -->
-  <section class="hero container" id="hero">
-    <div class="hero-content">
-      <div class="status-badge">
-        <span class="badge-indicator"></span>
-        <span>KCT Student • Reg No: 25BCS016 • 16 Verified Credentials</span>
+<div class="menu" id="menu" hidden>
+  <nav aria-label="Mobile">
+    <a href="#about"><span>01</span>About</a>
+    <a href="#work"><span>02</span>Work</a>
+    <a href="#skills"><span>03</span>Skills</a>
+    <a href="#credentials"><span>04</span>Credentials</a>
+    <a href="#journey"><span>05</span>Journey</a>
+    <a href="#contact"><span>06</span>Contact</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<section class="hero" id="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <p class="label hero__label" data-fade><span>Portfolio</span><span>2026</span></p>
+  <div class="hero__mast">
+    <h1 class="hero__name" aria-label="Adithya V"><span class="hero__fit" aria-hidden="true"><span class="hero__n1">Adithya</span> <em class="hero__n2">V.</em><span class="hero__base"></span></span></h1>
+    <p class="hero__title" data-rise>I fine-tune language models and ship them as <em>private, offline</em> apps. Five of my own are on Hugging Face.</p>
+  </div>
+  <div class="hero__meta" data-fade>
+    <span class="rule" data-rule></span>
+    <dl>
+      <div><dt class="label">Currently</dt><dd>BE Computer Science, KCT<br>Semester three</dd></div>
+      <div><dt class="label">Based in</dt><dd>Coimbatore, India<br><span id="clock">--:--</span> IST</dd></div>
+      <div><dt class="label">Looking for</dt><dd>Internships in AI / ML<br>and full-stack engineering</dd></div>
+      <div class="hero__scroll"><a class="hero__cv" href="resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a><a href="#about">Scroll <span aria-hidden="true">↓</span></a></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" id="about">
+  <header class="sec__head"><p class="label"><span>01</span>About</p></header>
+  <div class="sec__body">
+    <figure class="portrait" id="portrait" data-fade><img src="img/portrait.jpg" alt="Portrait of Adithya V in a dark suit and tie" width="1024" height="1024" decoding="async"><figcaption class="label">Adithya V · Coimbatore, 2026</figcaption></figure>
+    <p class="lede" data-rise>I study computer science at Kumaraguru College of Technology and spend the rest of my time building. I like AI best when it is <em>private and personal</em>, so most of what I make runs locally, from fine-tuning my own models to the apps that run them, with no accounts, no API keys and no cloud.</p>
+    <div class="about__cols" data-fade>
+      <p>In my third semester I designed, built and now maintain my college's IDEA Lab website on my own, and helped conduct two hackathons on it, Industry Connect and Smart City 2026, as their software builder.</p>
+      <p>During my internship at Axiswin Technologies I wrote bare-metal firmware for an ARM Cortex-M4. Before college, I was my school's topper in Computer Science.</p>
+    </div>
+    <ul class="figures">
+      <li data-fade><b>8</b><span class="label">Projects built</span></li>
+      <li data-fade><b>26</b><span class="label">Certificates</span></li>
+      <li data-fade><b>99<i>/100</i></b><span class="label">Class XII Computer Science</span></li>
+      <li data-fade><b>5</b><span class="label">Fine-tuned models on Hugging Face</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec" id="work">
+  <header class="sec__head"><p class="label"><span>02</span>Selected work</p></header>
+  <div class="sec__body">
+    <h2 class="title" data-rise>Eight things I have built, <em>and shipped.</em></h2>
+    <article class="case" aria-labelledby="case-title">
+      <div class="case__top" data-fade><p class="label"><span>01</span>Featured case study</p><p class="case__kind">Five fine-tuned models, one offline app</p></div>
+      <h3 class="case__title" id="case-title" data-rise>TQQ Chatbox</h3>
+      <p class="case__lede" data-fade>Character chatbots usually run one model in five costumes: they break character, invent memories and need the cloud. I wanted each character to be her own fine-tuned model, faithful to the story, running entirely on a laptop.</p>
+      <figure class="case__shot" data-fade><img src="img/work/tqq-home.jpg" alt="TQQ Chatbox home screen with five character panels, one fine-tuned model each" width="1427" height="825" loading="lazy" decoding="async"><figcaption class="label">The home screen: one fine-tuned model per character</figcaption></figure>
+      <div class="case__cols">
+        <div data-fade><p class="label"><span>01</span>Data</p><p>Every episode&rsquo;s subtitles became one master transcript, cut into each character&rsquo;s real scenes, plus 80 to 212 hand-written chats per character covering facts, traps and &ldquo;I&rsquo;m not sure&rdquo;.</p></div>
+        <div data-fade><p class="label"><span>02</span>Training</p><p>QLoRA on Llama-3 8B with Unsloth on a free Colab T4: 4-bit, rank 16, two epochs. Each model is merged and exported as an 8.5 GB GGUF file for Ollama.</p></div>
+        <div data-fade><p class="label"><span>03</span>Safety checks</p><p>Before you see a reply, word rules and a phi4-mini judge check it for wrong facts and invented memories, and quietly ask the model again when it slips.</p></div>
       </div>
+      <ul class="case__nums">
+        <li data-fade><b>69<i>/70</i></b><span>invented memories refused</span></li>
+        <li data-fade><b>0<i>/70</i></b><span>false alarms in testing</span></li>
+        <li data-fade><b>83<i>–11</i></b><span>best blind test against the untuned model</span></li>
+        <li data-fade><b>5</b><span>models published on Hugging Face</span></li>
+      </ul>
+      <div class="case__links" data-fade><a class="pill pill--solid" href="https://github.com/Adithya210207/tqq-chatbox" target="_blank" rel="noopener">View the code <span aria-hidden="true">↗</span></a><a class="pill" href="https://huggingface.co/Adithya210207-Ryuu" target="_blank" rel="noopener">The five models <span aria-hidden="true">↗</span></a></div>
+    </article>
+    <p class="label work__more">More work</p>
+    <ol class="work" id="work-list"><!--pre--><li class="work__item">
+    <button class="work__head" type="button" aria-expanded="false" aria-controls="work-0">
+      <span class="work__no">02</span><img class="work__thumb" src="img/preview/ryuu.jpg" alt="" loading="lazy" decoding="async"><span class="work__title">Ryuu Explainer AI</span><span class="work__kind">Offline AI assistant</span><span class="work__plus" aria-hidden="true"></span>
+    </button>
+    <div class="work__panel" id="work-0"><div class="work__inner"><div class="shots shots--2"><figure class="shot"><img src="img/work/ryuu-chat.jpg" alt="Ryuu explaining recursion in Python with a worked factorial example, running on qwen2.5-coder 14B" loading="lazy" decoding="async"></figure><figure class="shot"><img src="img/work/ryuu-home.jpg" alt="Ryuu greeting a new chat, with model switching and saved conversations" loading="lazy" decoding="async"></figure></div><div class="work__grid work__grid--noart">
+      <div class="work__art" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="14" y="24" width="92" height="58" rx="10"></rect><path d="M40 82 34 100 58 82"></path><circle cx="44" cy="53" r="2.5"></circle><circle cx="60" cy="53" r="2.5"></circle><circle cx="76" cy="53" r="2.5"></circle></svg></div>
+      <div><p class="work__desc">A private desktop assistant that explains concepts, debugs code and writes it in any language. It runs entirely on local models, including on Intel Arc integrated graphics.</p><ul class="work__facts"><li>Five switchable local models, with only one loaded on the GPU at a time</li><li>Reads screenshots and attached files</li><li>No accounts, no API keys, nothing leaves the machine</li></ul></div>
+      <div class="work__side"><div><p class="label">Made with</p><p>Python · Tkinter · Ollama · Vulkan</p></div><div class="work__links"><a class="link" href="https://github.com/Adithya210207/ryuu-explainer-ai" target="_blank" rel="noopener">View the code ↗</a></div></div>
+    </div></div></div>
+  </li><li class="work__item">
+    <button class="work__head" type="button" aria-expanded="false" aria-controls="work-1">
+      <span class="work__no">03</span><img class="work__thumb" src="img/preview/idealab.jpg" alt="" loading="lazy" decoding="async"><span class="work__title">KCT IDEA Lab website</span><span class="work__kind">College website, built solo</span><span class="work__plus" aria-hidden="true"></span>
+    </button>
+    <div class="work__panel" id="work-1"><div class="work__inner"><div class="shots shots--2"><figure class="shot"><img src="img/work/idealab-home.jpg" alt="The KCT AICTE IDEA Lab home page" loading="lazy" decoding="async"></figure><figure class="shot"><img src="img/work/idealab-hackathon.jpg" alt="The Industry Connect Hackathon 2026 page I built on the IDEA Lab site" loading="lazy" decoding="async"></figure></div><div class="work__grid work__grid--noart">
+      <div class="work__art" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="12" y="20" width="96" height="80" rx="6"></rect><path d="M12 38h96"></path><circle cx="23" cy="29" r="2"></circle><circle cx="32" cy="29" r="2"></circle><circle cx="41" cy="29" r="2"></circle><rect x="24" y="50" width="38" height="36"></rect><path d="M72 52h24M72 64h24M72 76h16"></path></svg></div>
+      <div><p class="work__desc">The official website of my college's AICTE IDEA Lab. I designed it, built it and keep it running on my own, including the hackathon portal behind the Industry Connect Hackathon 2026 and the Smart City Hackathon 2026, which I helped conduct as their software builder.</p><ul class="work__facts"><li>Designed, built and maintained alone in semester three</li><li>A hackathon portal for problem statements, guidelines, team registration and submissions</li><li>Industry Connect Hackathon 2026 at KCT on 10 and 11 April</li><li>Smart City Hackathon 2026, run with IEEE Smart Cities from 8 August to 13 October</li></ul></div>
+      <div class="work__side"><div><p class="label">Made with</p><p>Web design · Front end · Deployment · Support</p></div><div class="work__links"><a class="link" href="https://idealab.kct.ac.in/" target="_blank" rel="noopener">Visit the site ↗</a></div></div>
+    </div></div></div>
+  </li><li class="work__item">
+    <button class="work__head" type="button" aria-expanded="false" aria-controls="work-2">
+      <span class="work__no">04</span><img class="work__thumb" src="img/preview/persona.jpg" alt="" loading="lazy" decoding="async"><span class="work__title">Personality AI</span><span class="work__kind">Character chatbot</span><span class="work__plus" aria-hidden="true"></span>
+    </button>
+    <div class="work__panel" id="work-2"><div class="work__inner"><div class="shots shots--2 shots--crop"><figure class="shot"><img src="img/work/persona-rem.jpg" alt="Chatting with Rem in Personality AI, with her portrait and bond status beside the conversation" loading="lazy" decoding="async"></figure><figure class="shot"><img src="img/work/persona-lelouch.jpg" alt="Chatting with Lelouch in Personality AI, with his strategic alignment panel" loading="lazy" decoding="async"></figure></div><div class="work__grid work__grid--noart">
+      <div class="work__art" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="12" y="20" width="60" height="42" rx="9"></rect><path d="M28 62 24 76 42 62"></path><rect x="48" y="56" width="60" height="42" rx="9"></rect><path d="M92 98 96 110 78 98"></path></svg></div>
+      <div><p class="work__desc">A desktop chatbot in which every character has a distinct voice, theme and avatar, with replies streaming live from a local model.</p><ul class="work__facts"><li>Five personas, each with its own interface theme</li><li>Trio Chat, where two characters answer together</li><li>Live controls for temperature, top-p and token limits</li></ul></div>
+      <div class="work__side"><div><p class="label">Made with</p><p>Python · Tkinter · Ollama</p></div><div class="work__links"><a class="link" href="https://github.com/Adithya210207/personality-ai-chatbot" target="_blank" rel="noopener">View the code ↗</a></div></div>
+    </div></div></div>
+  </li><li class="work__item">
+    <button class="work__head" type="button" aria-expanded="false" aria-controls="work-3">
+      <span class="work__no">05</span><img class="work__thumb" src="img/preview/pawfinder.jpg" alt="" loading="lazy" decoding="async"><span class="work__title">PawFinder</span><span class="work__kind">Web platform, live</span><span class="work__plus" aria-hidden="true"></span>
+    </button>
+    <div class="work__panel" id="work-3"><div class="work__inner"><div class="shots shots--2"><figure class="shot"><img src="img/work/pawfinder-discover.jpg" alt="PawFinder discover page with urgent dogs, filters and the featured dog" loading="lazy" decoding="async"></figure><figure class="shot"><img src="img/work/pawfinder-shelters.jpg" alt="PawFinder shelter directory with verified Coimbatore shelters" loading="lazy" decoding="async"></figure></div><div class="work__grid work__grid--noart">
+      <div class="work__art" aria-hidden="true"><svg viewBox="0 0 120 120"><ellipse cx="60" cy="78" rx="22" ry="17"></ellipse><ellipse cx="28" cy="54" rx="8" ry="11"></ellipse><ellipse cx="48" cy="34" rx="8" ry="11"></ellipse><ellipse cx="72" cy="34" rx="8" ry="11"></ellipse><ellipse cx="92" cy="54" rx="8" ry="11"></ellipse></svg></div>
+      <div><p class="work__desc">An adoption and rescue platform for India that connects people with stray dogs, shelters, emergency helplines and foster programmes.</p><ul class="work__facts"><li>52 dog profiles with health and personality records</li><li>18 partner shelters and 26 care articles</li><li>Emergency helpline, rescue reports and foster sign-up</li></ul></div>
+      <div class="work__side"><div><p class="label">Made with</p><p>JavaScript · HTML · CSS · Render</p></div><div class="work__links"><a class="link" href="https://pawfinder-xvjk.onrender.com/" target="_blank" rel="noopener">Open the live site ↗</a><a class="link" href="https://github.com/Adithya210207/pawfinder" target="_blank" rel="noopener">View the code ↗</a></div></div>
+    </div></div></div>
+  </li><li class="work__item">
+    <button class="work__head" type="button" aria-expanded="false" aria-controls="work-4">
+      <span class="work__no">06</span><img class="work__thumb" src="img/preview/automobile.jpg" alt="" loading="lazy" decoding="async"><span class="work__title">Automobile Lab</span><span class="work__kind">Hardware and web interface</span><span class="work__plus" aria-hidden="true"></span>
+    </button>
+    <div class="work__panel" id="work-4"><div class="work__inner"><div class="shots shots--1"><figure class="shot"><img src="img/work/automobile-dashboard.jpg" alt="The live speedometer dashboard in Sport mode at 56 km/h" loading="lazy" decoding="async"></figure></div><div class="work__grid work__grid--noart">
+      <div class="work__art" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M16 84a44 44 0 0 1 88 0"></path><path d="M60 84 82 50"></path><circle cx="60" cy="84" r="4"></circle><path d="M24 84h6M90 84h6M60 46v6M33 57l4 4M87 57l-4 4M36 102h48"></path></svg></div>
+      <div><p class="work__desc">An Arduino speedometer that grew, version by version, into adaptive cruise control with a live web dashboard over serial.</p><ul class="work__facts"><li>Six versions, from a throttle reading to cruise control</li><li>Three gear modes with brake and cruise inputs</li><li>Laser time-of-flight sensor for distance keeping</li></ul></div>
+      <div class="work__side"><div><p class="label">Made with</p><p>Arduino C++ · Web Serial · JavaScript</p></div><div class="work__links"><a class="link" href="https://github.com/Adithya210207/automobile-lab-projects" target="_blank" rel="noopener">View the code ↗</a></div></div>
+    </div></div></div>
+  </li><li class="work__item">
+    <button class="work__head" type="button" aria-expanded="false" aria-controls="work-5">
+      <span class="work__no">07</span><img class="work__thumb" src="img/preview/csgpt.jpg" alt="" loading="lazy" decoding="async"><span class="work__title">CS GPT for CBSE 11 &amp; 12</span><span class="work__kind">Learning tool</span><span class="work__plus" aria-hidden="true"></span>
+    </button>
+    <div class="work__panel" id="work-5"><div class="work__inner"><div class="shots shots--2"><figure class="shot"><img src="img/work/csgpt-11-menu.jpg" alt="The Class 11 CS GPT menu of seventeen runnable programs in a VS Code-styled terminal" loading="lazy" decoding="async"></figure><figure class="shot"><img src="img/work/csgpt-12-hanoi.jpg" alt="Class 12 CS GPT showing the source code of its recursive Tower of Hanoi program" loading="lazy" decoding="async"></figure></div><div class="work__grid work__grid--noart">
+      <div class="work__art" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M44 36 20 60l24 24M76 36l24 24-24 24M68 28 52 92"></path></svg></div>
+      <div><p class="work__desc">The CBSE Computer Science syllabus as runnable programs inside a VS Code-styled window. The study tool I wished I had at school.</p><ul class="work__facts"><li>Pattern generators, sorting algorithms and data-type drills</li><li>Calculators, games and data-structure demonstrations</li><li>One application each for Class 11 and Class 12</li></ul></div>
+      <div class="work__side"><div><p class="label">Made with</p><p>Python · GUI</p></div><div class="work__links"><a class="link" href="https://github.com/Adithya210207/cs-gpt-cbse-11-12" target="_blank" rel="noopener">View the code ↗</a></div></div>
+    </div></div></div>
+  </li><li class="work__item">
+    <button class="work__head" type="button" aria-expanded="false" aria-controls="work-6">
+      <span class="work__no">08</span><img class="work__thumb" src="img/preview/models.jpg" alt="" loading="lazy" decoding="async"><span class="work__title">Ryuu v1 models</span><span class="work__kind">Five open models</span><span class="work__plus" aria-hidden="true"></span>
+    </button>
+    <div class="work__panel" id="work-6"><div class="work__inner"><div class="shots shots--2"><figure class="shot"><img src="img/work/models-hub.jpg" alt="My Hugging Face page with the five ryuu_v1 models" loading="lazy" decoding="async"></figure><figure class="shot"><img src="img/work/models-miku.jpg" alt="The Miku_ryuu_v1 model card on Hugging Face" loading="lazy" decoding="async"></figure></div><div class="work__grid work__grid--noart">
+      <div class="work__art" aria-hidden="true"><svg viewBox="0 0 120 120"><path d="M60 20 104 42 60 64 16 42Z"></path><path d="M16 60l44 22 44-22M16 78l44 22 44-22"></path></svg></div>
+      <div><p class="work__desc">The five sisters from TQQ Chatbox, published on Hugging Face so that anyone can download them and run them offline.</p><ul class="work__facts"><li>Ichika, Nino, Miku, Yotsuba and Itsuki ryuu_v1</li><li>Llama-3 8B, merged and exported as 8.5 GB Q8_0 GGUF files</li><li>Each ships with its own Modelfile for Ollama</li></ul></div>
+      <div class="work__side"><div><p class="label">Made with</p><p>Hugging Face · GGUF · Ollama</p></div><div class="work__links"><a class="link" href="https://huggingface.co/Adithya210207-Ryuu" target="_blank" rel="noopener">Open the model hub ↗</a></div></div>
+    </div></div></div>
+  </li><!--/pre--></ol>
+  </div>
+</section>
 
-      <h1 class="hero-title">
-        Official Portfolio of <span class="text-gradient">Adithya V</span>
-      </h1>
+<section class="sec" id="skills">
+  <header class="sec__head"><p class="label"><span>03</span>Skills</p></header>
+  <div class="sec__body">
+    <h2 class="title" data-rise>What I work with, <em>from model to pixel.</em></h2>
+    <div class="skills" id="skills-list"><!--pre--><div><h3>AI and models</h3><ul><li>Fine-tuning with QLoRA</li><li>Local LLMs with Ollama</li><li>Dataset building</li><li>Prompt design</li><li>AI agents and MCP</li><li>GGUF models</li></ul></div><div><h3>Web</h3><ul><li>HTML and CSS</li><li>JavaScript</li><li>React</li><li>Node.js and Express</li><li>MongoDB</li></ul></div><div><h3>Firmware</h3><ul><li>ARM Cortex-M4</li><li>RTOS</li><li>Arduino C++</li><li>ADC, DAC, PWM, USART</li><li>Web Serial</li></ul></div><div><h3>Foundations</h3><ul><li>Python</li><li>Java and JavaFX</li><li>C</li><li>Data structures and algorithms</li><li>Operating systems</li><li>Data analytics</li></ul></div><div><h3>Beyond code</h3><ul><li>UI and UX design</li><li>Digital marketing</li><li>English, Cambridge B2</li><li>First aid</li></ul></div><!--/pre--></div>
+  </div>
+</section>
 
-      <p class="hero-subtitle">
-        Computer Science & Engineering student at <strong style="color:var(--accent-cyan);">Kumaraguru College of Technology (Reg No: 25BCS016)</strong>.
-      </p>
+<section class="sec" id="credentials">
+  <header class="sec__head"><p class="label"><span>04</span>Credentials</p></header>
+  <div class="sec__body">
+    <h2 class="title" data-rise>Twenty-six certificates <em>and counting.</em></h2>
+    <div class="filters" id="filters" role="group" aria-label="Filter credentials" data-fade><!--pre--><button type="button" aria-pressed="true" data-cat="All">All<span>26</span></button><button type="button" aria-pressed="false" data-cat="AI">AI<span>8</span></button><button type="button" aria-pressed="false" data-cat="Development">Development<span>11</span></button><button type="button" aria-pressed="false" data-cat="Beyond code">Beyond code<span>7</span></button><!--/pre--></div>
+    <ol class="certs" id="cert-list"><!--pre--><li class="cert" data-i="0"><button type="button"><span class="cert__no">01</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/01.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Firmware internship, ARM Cortex-M4</span><span class="cert__m"><span>Axiswin Technologies</span><span>Jul 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="1"><button type="button"><span class="cert__no">02</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/27.png" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Finance Management traineeship</span><span class="cert__m"><span>Maiyam</span><span>Nov 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="2"><button type="button"><span class="cert__no">03</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/28.jpg" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Operating Systems</span><span class="cert__m"><span>Scaler Topics</span><span>Nov 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="3"><button type="button"><span class="cert__no">04</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/12.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Data Analytics traineeship</span><span class="cert__m"><span>Maiyam</span><span>Jun 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="4"><button type="button"><span class="cert__no">05</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/13.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Digital Marketing traineeship</span><span class="cert__m"><span>Maiyam</span><span>May 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="5"><button type="button"><span class="cert__no">06</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/22.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">UI / UX Design traineeship</span><span class="cert__m"><span>Maiyam</span><span>Apr 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="6"><button type="button"><span class="cert__no">07</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/07.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">AI Tools and ChatGPT workshop</span><span class="cert__m"><span>be10x</span><span>Apr 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="7"><button type="button"><span class="cert__no">08</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/23.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">The Agentic Future</span><span class="cert__m"><span>Yugam 2026, KCT</span><span>Mar 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="8"><button type="button"><span class="cert__no">09</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/24.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Building LLMs from Scratch</span><span class="cert__m"><span>Yugam 2026, KCT</span><span>Mar 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="9"><button type="button"><span class="cert__no">10</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/09.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">C Programming</span><span class="cert__m"><span>iamneo, KCT</span><span>Feb 2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="10" hidden=""><button type="button"><span class="cert__no">11</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/05.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Artificial Intelligence traineeship</span><span class="cert__m"><span>Maiyam</span><span>2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="11" hidden=""><button type="button"><span class="cert__no">12</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/16.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Full-Stack MERN traineeship</span><span class="cert__m"><span>Maiyam</span><span>2026</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="12" hidden=""><button type="button"><span class="cert__no">13</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/15.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Emerging Domains in Computing</span><span class="cert__m"><span>KCT and Coursera</span><span>Nov 2025</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="13" hidden=""><button type="button"><span class="cert__no">14</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/14.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Emerging Domains</span><span class="cert__m"><span>KCT and Coursera</span><span>Nov 2025</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="14" hidden=""><button type="button"><span class="cert__no">15</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/06.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">PEER Life Support and First Aid</span><span class="cert__m"><span>ALERT NGO</span><span>Oct 2025</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="15" hidden=""><button type="button"><span class="cert__no">16</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/03.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Google AI Essentials</span><span class="cert__m"><span>Google and Coursera</span><span>Apr 2025</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="16" hidden=""><button type="button"><span class="cert__no">17</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/04.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">AI for Youth</span><span class="cert__m"><span>Intel and CBSE</span><span>Nov 2024</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="17" hidden=""><button type="button"><span class="cert__no">18</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/11.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Cambridge English, B2, score 167</span><span class="cert__m"><span>Cambridge English</span><span>Jul 2024</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="18" hidden=""><button type="button"><span class="cert__no">19</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/10.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Cambridge English certificate</span><span class="cert__m"><span>Cambridge English</span><span>Jul 2024</span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="19" hidden=""><button type="button"><span class="cert__no">20</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/02.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">AI Automation and Agents Expert</span><span class="cert__m"><span>Digital Scholar</span><span></span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="20" hidden=""><button type="button"><span class="cert__no">21</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/17.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Generative AI Expert</span><span class="cert__m"><span>Digital Scholar</span><span></span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="21" hidden=""><button type="button"><span class="cert__no">22</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/20.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Python Programming</span><span class="cert__m"><span>iamneo, KCT</span><span></span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="22" hidden=""><button type="button"><span class="cert__no">23</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/18.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">C Programming and DSA</span><span class="cert__m"><span>Intellipaat</span><span></span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="23" hidden=""><button type="button"><span class="cert__no">24</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/19.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Data Structures using C</span><span class="cert__m"><span>Mindluster</span><span></span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="24" hidden=""><button type="button"><span class="cert__no">25</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/21.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Fundamentals of Data Structures in C</span><span class="cert__m"><span>Simplilearn SkillUp</span><span></span></span><span class="cert__a" aria-hidden="true">→</span></button></li><li class="cert" data-i="25" hidden=""><button type="button"><span class="cert__no">26</span><span class="cert__thumb" aria-hidden="true"><img src="certificates/thumbs/08.webp" alt="" loading="lazy" decoding="async"></span><span class="cert__t">Best Scientific and ICT Skills, Class 11</span><span class="cert__m"><span>SSVM School of Excellence</span><span></span></span><span class="cert__a" aria-hidden="true">→</span></button></li><!--/pre--></ol>
+    <button class="more" id="cert-more" type="button"></button>
+  </div>
+</section>
 
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">
-          View Projects <i class="fas fa-code-branch"></i>
-        </a>
-        <a href="#certificates" class="btn btn-secondary">
-          Explore Credentials <i class="fas fa-certificate"></i>
-        </a>
-        <a href="#contact" class="btn btn-secondary">
-          <i class="fas fa-paper-plane"></i> Send Message
-        </a>
-      </div>
+<section class="sec" id="journey">
+  <header class="sec__head"><p class="label"><span>05</span>Journey</p></header>
+  <div class="sec__body">
+    <h2 class="title" data-rise>The story so far, <em>most recent first.</em></h2>
+    <ol class="journey" id="journey-list"><!--pre--><li><p class="journey__y">Now</p><div><h3 class="journey__t">A one-person web team at the KCT IDEA Lab</h3><p class="journey__d">In my third semester I designed, built and now maintain idealab.kct.ac.in on my own and handle its support.</p></div></li><li><p class="journey__y">2026</p><div><h3 class="journey__t">Smart City Hackathon 2026</h3><p class="journey__d">Helped conduct the IDEA Lab and IEEE Smart Cities hackathon on local urban challenges, from 8 August to 13 October, as its software builder, running the portal for problem statements, team registrations and submissions.</p></div></li><li><p class="journey__y">2026</p><div><h3 class="journey__t">Five fine-tuned models and TQQ Chatbox</h3><p class="journey__d">Built datasets from every episode's subtitles plus hand-written chats, fine-tuned five Llama-3 8B models with QLoRA on Google Colab, and published them on Hugging Face inside an offline JavaFX app.</p></div></li><li><p class="journey__y">2026</p><div><h3 class="journey__t">Firmware internship at Axiswin Technologies</h3><p class="journey__d">Bare-metal firmware for an ARM Cortex-M4 intelligent battery monitor: RTOS tasks, PWM for electric vehicles, and GPIO, ADC, DAC and USART drivers.</p></div></li><li><p class="journey__y">2026</p><div><h3 class="journey__t">Industry Connect Hackathon 2026</h3><p class="journey__d">Built and ran the IDEA Lab portal for KCT's Industry Connect Hackathon on 10 and 11 April, with its problem statements, team registration and submissions.</p></div></li><li><p class="journey__y">2026</p><div><h3 class="journey__t">A year of traineeships and workshops</h3><p class="journey__d">Artificial intelligence, data analytics, full-stack MERN, UI/UX, digital marketing and finance with Maiyam, and two Yugam workshops on agentic AI and building LLMs from scratch.</p></div></li><li><p class="journey__y">2025</p><div><h3 class="journey__t">Computer Science and Engineering at KCT</h3><p class="journey__d">Began a BE at Kumaraguru College of Technology, Coimbatore. Register number 25BCS016.</p></div></li><li><p class="journey__y">2025</p><div><h3 class="journey__t">School topper in Computer Science</h3><p class="journey__d">CBSE Class XII at SSVM School of Excellence, with 99 out of 100 in Computer Science, 93 in Mathematics and 91 in English.</p></div></li><li><p class="journey__y">2024</p><div><h3 class="journey__t">Cambridge English, level B2</h3><p class="journey__d">An overall score of 167, with 182 in Speaking. In the same year, Intel's AI for Youth programme.</p></div></li><li><p class="journey__y">2023</p><div><h3 class="journey__t">CBSE Class X</h3><p class="journey__d">Secondary School Examination at Air Force School, Redfields, Coimbatore.</p></div></li><!--/pre--></ol>
+  </div>
+</section>
 
-      <div class="hero-stats">
-        <div class="stat-item">
-          <h3 class="text-gradient">25BCS016</h3>
-          <p>KCT Reg. Number</p>
-        </div>
-        <div class="stat-item">
-          <h3 class="text-gradient" style="font-size: 1.25rem; white-space: normal; line-height: 1.35;">School Topper in Computer Science</h3>
-          <p>SSVM School of Excellence</p>
-        </div>
-        <div class="stat-item">
-          <h3 class="text-gradient">16</h3>
-          <p>Verified Credentials</p>
-        </div>
+<section class="contact" id="contact">
+  <p class="label" data-fade><span>06</span>Contact</p>
+  <h2 class="contact__title" aria-label="Let's talk."><span class="contact__fit" data-rise>Let's <em>talk.</em></span></h2>
+  <div class="contact__row" data-fade>
+    <div class="sign">
+      <img class="sign__img" src="img/portrait.jpg" alt="Adithya V" width="1024" height="1024" loading="lazy" decoding="async">
+      <div>
+        <p class="sign__name">Adithya V</p>
+        <p class="sign__meta"><span class="sign__dot" aria-hidden="true"></span>Open to internships</p>
+        <p class="sign__meta">Coimbatore · <span data-clock>--:--</span> IST</p>
       </div>
     </div>
-  </section>
-
-  <!-- Featured Projects & Innovations Section -->
-  <section class="skills-section container" id="projects" style="padding-top: 5rem;">
-    <div class="section-header">
-      <span class="section-tag">Software & AI Engineering</span>
-      <h2 class="section-title">Featured Projects & Innovations</h2>
-      <p class="section-desc">Open-source AI engines, full-stack applications, and embedded firmware systems built by Adithya V.</p>
-    </div>
-
-    <div class="projects-grid">
-
-      <!-- 1. Ryuu Explainer AI -->
-      <div class="glass-card project-card">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2.2rem; color: var(--accent-pink);"><i class="fas fa-dragon"></i></div>
-            <span class="project-badge" style="position:static; background:rgba(236,72,153,0.15); border-color:var(--accent-pink);">Offline AI Assistant</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.3rem;">Ryuu Explainer AI</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Repository: <strong>Adithya210207/ryuu-explainer-ai</strong></p>
-          <p class="project-desc">A local-first AI desktop assistant & front-end for locally-hosted LLMs (<code class="mono" style="color:var(--accent-cyan);">Ryuu_ai.py</code>). Gives a full ChatGPT-style interface running entirely on your GPU — 100% offline, zero cloud, no accounts, and zero API costs.</p>
-          <div class="project-tags" style="margin-bottom:1rem;">
-            <span class="tag">Local LLM Front-End</span>
-            <span class="tag">Offline AI Assistant</span>
-            <span class="tag">GPU Accelerated</span>
-            <span class="tag">Zero API Cost</span>
-            <span class="tag">Python</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Adithya210207/ryuu-explainer-ai" target="_blank" rel="noopener" class="link-btn">
-              <i class="fab fa-github"></i> View GitHub Repo
-            </a>
-          </div>
-        </div>
+    <p class="contact__lead">For internships, hackathons, or a project you think I would enjoy, write to me. I read everything and reply myself.</p>
+    <div class="contact__mail">
+      <a class="mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=adithya210207.v@gmail.com" target="_blank" rel="noopener">adithya210207.v@gmail.com</a>
+      <div class="contact__btns">
+        <a class="pill pill--solid" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=adithya210207.v@gmail.com&amp;su=Hello%20Adithya" target="_blank" rel="noopener">Write to me <span aria-hidden="true">→</span></a>
+        <button class="pill" id="copy" type="button">Copy address</button>
+        <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↗</span></a>
       </div>
-
-      <!-- 2. Personality AI Chatbot -->
-      <div class="glass-card project-card">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2.2rem; color: var(--accent-violet);"><i class="fas fa-robot"></i></div>
-            <span class="project-badge" style="position:static; background:rgba(139,92,246,0.15); border-color:var(--accent-violet);">LLM & Chatbot</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.3rem;">Personality AI Chatbot</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Repository: <strong>Adithya210207/personality-ai-chatbot</strong></p>
-          <p class="project-desc">AI-powered conversational chatbot featuring customizable personality traits, dynamic character prompts, custom asset branding, and an interactive UI interface.</p>
-          <div class="project-tags" style="margin-bottom:1rem;">
-            <span class="tag">AI Chatbot</span>
-            <span class="tag">Character Prompts</span>
-            <span class="tag">Custom UI</span>
-            <span class="tag">Personality Traits</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Adithya210207/personality-ai-chatbot" target="_blank" rel="noopener" class="link-btn">
-              <i class="fab fa-github"></i> View GitHub Repo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. PawFinder -->
-      <div class="glass-card project-card">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2.2rem; color: var(--accent-cyan);"><i class="fas fa-paw"></i></div>
-            <span class="project-badge" style="position:static; background:rgba(6,182,212,0.15); border-color:var(--accent-cyan);">Live Web App</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.3rem;">PawFinder</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Repository: <strong>Adithya210207/pawfinder</strong> • Deployed on Render</p>
-          <p class="project-desc">Comprehensive PawFinder Web Application featuring 52 dogs, 18 animal shelters, 26 articles, emergency helpline, foster portal, and full database integration.</p>
-          <div class="project-tags" style="margin-bottom:1rem;">
-            <span class="tag">Full-Stack</span>
-            <span class="tag">Pet Adoption</span>
-            <span class="tag">Render Live</span>
-            <span class="tag">Database</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Adithya210207/pawfinder" target="_blank" rel="noopener" class="link-btn">
-              <i class="fab fa-github"></i> GitHub Repo
-            </a>
-            <a href="https://pawfinder-xvjk.onrender.com/" target="_blank" rel="noopener" class="link-btn" style="color:var(--accent-cyan);">
-              <i class="fas fa-arrow-up-right-from-square"></i> Live Application
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. CS GPT for CBSE Class 11 & 12 -->
-      <div class="glass-card project-card">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2.2rem; color: #10b981;"><i class="fab fa-python"></i></div>
-            <span class="project-badge" style="position:static; background:rgba(16,185,129,0.15); border-color:#10b981;">EdTech AI</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.3rem;">CS GPT for CBSE 11 & 12</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Repository: <strong>Adithya210207/cs-gpt-cbse-11-12</strong></p>
-          <p class="project-desc">Specialized Computer Science GPT study assistants tailored specifically for CBSE Class 11 and Class 12 curricula (<code class="mono" style="color:var(--accent-cyan);">cs11_gpt.py</code>, <code class="mono">cs12_gpt.py</code>).</p>
-          <div class="project-tags" style="margin-bottom:1rem;">
-            <span class="tag">Python</span>
-            <span class="tag">GPT API</span>
-            <span class="tag">CBSE Computer Science</span>
-            <span class="tag">EdTech</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Adithya210207/cs-gpt-cbse-11-12" target="_blank" rel="noopener" class="link-btn">
-              <i class="fab fa-github"></i> View GitHub Repo
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. Automobile Lab Projects (AML) -->
-      <div class="glass-card project-card">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2.2rem; color: #f59e0b;"><i class="fas fa-gauge-high"></i></div>
-            <span class="project-badge" style="position:static; background:rgba(245,158,11,0.15); border-color:#f59e0b;">Firmware & Embedded</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.3rem;">Automobile Lab Projects (AML)</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Repository: <strong>Adithya210207/automobile-lab-projects</strong></p>
-          <p class="project-desc">Complete version progression (<code class="mono">Speedometer-AML_v1</code> through <code class="mono">v6</code>), Arduino <code class="mono">.ino</code> firmware, Waveshare TOF Laser Range Sensor integration, and Web Serial API controllers.</p>
-          <div class="project-tags" style="margin-bottom:1rem;">
-            <span class="tag">Arduino C++</span>
-            <span class="tag">TOF Laser Sensor</span>
-            <span class="tag">Web Serial API</span>
-            <span class="tag">Firmware v1-v6</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Adithya210207/automobile-lab-projects" target="_blank" rel="noopener" class="link-btn">
-              <i class="fab fa-github"></i> View GitHub Repo
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Verified Certificates Section -->
-  <section class="skills-section container" id="certificates" style="padding-top: 4rem;">
-    <div class="section-header">
-      <span class="section-tag">Chronological Record</span>
-      <h2 class="section-title">Verified Credentials & Certificates (16 Documents)</h2>
-      <p class="section-desc">Arranged in descending order by date (Newest to Oldest) with full verification details.</p>
-    </div>
-
-    <!-- Search & Filter Controls -->
-    <div class="controls-wrapper">
-      <div class="search-box">
-        <i class="fas fa-search search-icon"></i>
-        <input type="text" id="cert-search" class="search-input" placeholder="Search by title, organization, skill (e.g. KCT, Axiswin, Maiyam, Python)...">
-      </div>
-
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All (16)</button>
-        <button class="filter-btn" data-filter="internship">Internships & Traineeships</button>
-        <button class="filter-btn" data-filter="ai">AI & Computing</button>
-        <button class="filter-btn" data-filter="cert">Certifications & Languages</button>
-        <button class="filter-btn" data-filter="academic">Academic Board Results</button>
-      </div>
-    </div>
-
-    <div class="projects-grid" id="certs-container">
-
-      <!-- 1. Axiswin Technologies Internship (04 July 2026) -->
-      <div class="glass-card project-card cert-item" data-category="internship" data-date="2026-07-04" onclick="openCertModal('axiswin')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: var(--accent-cyan);"><i class="fas fa-microchip"></i></div>
-            <span class="project-badge" style="position:static;">04 July 2026</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">Axiswin Technologies Internship</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Axiswin Technologies</strong> • Ref: CBE-10</p>
-          <p class="project-desc">Awarded to <strong>Mr. V. Adithya (Reg. No: 25BCS016)</strong> from <strong>Kumaraguru College of Technology</strong> for completing internship program from 22.06.2026 to 04.07.2026.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Completed Project:</strong> "Firmware Development for an ARM Cortex-M4 Based Intelligent Battery Monitoring Application"</div>
-            <div><strong>Skills:</strong> Bare-Metal, 8/32-bit Microcontrollers, RTOS, PWM for EV, GPIO/ADC/DAC/USART</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Axiswin Tech</span>
-            <span class="tag">ARM Cortex-M4</span>
-            <span class="tag">RTOS</span>
-            <span class="tag">EV Firmware</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2. Maiyam Data Analytics Traineeship (04 June 2026) -->
-      <div class="glass-card project-card cert-item" data-category="internship" data-date="2026-06-04" onclick="openCertModal('maiyam_data')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #ec4899;"><i class="fas fa-chart-pie"></i></div>
-            <span class="project-badge" style="position:static;">04 June 2026</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">Data Analytics Traineeship</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Maiyam (மயம்)</strong> • DPIIT #startupindia / MSME / ISO 9001:2015</p>
-          <p class="project-desc">Certificate of Traineeship awarded to <strong>Adithya V</strong> for successfully completing Data Analytics Traineeship.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Mentors:</strong> Loganathan V (Data Analytics Mentor) & Varun Sivachandran (CPO)</div>
-            <div><strong>Credential ID:</strong> <span class="mono" style="color:var(--accent-cyan);">MYMDATA3646</span></div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Maiyam</span>
-            <span class="tag">Data Analytics</span>
-            <span class="tag">DPIIT StartupIndia</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. Maiyam Digital Marketing Traineeship (06 May 2026) -->
-      <div class="glass-card project-card cert-item" data-category="internship" data-date="2026-05-06" onclick="openCertModal('maiyam_dm')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #ec4899;"><i class="fas fa-bullhorn"></i></div>
-            <span class="project-badge" style="position:static;">06 May 2026</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">Digital Marketing Traineeship</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Maiyam (மயம்)</strong> • DPIIT #startupindia / MSME / ISO 9001:2015</p>
-          <p class="project-desc">Certificate of Traineeship awarded to <strong>Adithya V</strong> for successfully completing Digital Marketing Traineeship.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Mentors:</strong> Rajesh R (Digital Marketing Mentor) & Varun Sivachandran (CPO)</div>
-            <div><strong>Credential ID:</strong> <span class="mono" style="color:var(--accent-cyan);">MYMDM2700</span></div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Maiyam</span>
-            <span class="tag">Digital Marketing</span>
-            <span class="tag">DPIIT StartupIndia</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4. Maiyam UI/UX Design Traineeship (08 April 2026) -->
-      <div class="glass-card project-card cert-item" data-category="internship" data-date="2026-04-08" onclick="openCertModal('maiyam_uiux')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #ec4899;"><i class="fas fa-palette"></i></div>
-            <span class="project-badge" style="position:static;">08 Apr 2026</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">UI/UX Design Traineeship</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Maiyam (மயம்)</strong> • DPIIT #startupindia / MSME / ISO 9001:2015</p>
-          <p class="project-desc">Certificate of Traineeship presented to <strong>Adithya V</strong> for successfully completing UI/UX Design Traineeship.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Mentors:</strong> Brandit Designs (Maiyyam Design Partner) & Varun Sivachandran (CPO)</div>
-            <div><strong>Credential ID:</strong> <span class="mono" style="color:var(--accent-cyan);">MYMUIUXD2145</span></div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Maiyam</span>
-            <span class="tag">UI/UX Design</span>
-            <span class="tag">DPIIT StartupIndia</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5. be10x AI Tools & ChatGPT Workshop (05 April 2026) -->
-      <div class="glass-card project-card cert-item" data-category="ai" data-date="2026-04-05" onclick="openCertModal('be10x')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #f59e0b;"><i class="fas fa-wand-magic-sparkles"></i></div>
-            <span class="project-badge" style="position:static;">April 5th, 2026</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">AI Tools and ChatGPT Workshop</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>be10x</strong></p>
-          <p class="project-desc">Awarded to <strong>ADITHYA V</strong> for completion of AI tools and ChatGPT workshop (AI presentations under 5 min, Data analysis under 30 min, Code & Debug under 10 min).</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Signatories:</strong> Aditya Goenka & Aditya Kachave (Co-founders)</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">be10x</span>
-            <span class="tag">ChatGPT</span>
-            <span class="tag">AI Productivity</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6. Yugam 2026: Agentic AI Workshop (04 March 2026) -->
-      <div class="glass-card project-card cert-item" data-category="ai" data-date="2026-03-04" onclick="openCertModal('yugam_agentic')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #8b5cf6;"><i class="fas fa-robot"></i></div>
-            <span class="project-badge" style="position:static;">04 March 2026</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">The Agentic Future: Reinventing Software Beyond SaaS</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">YUGAM 2026 • Kumaraguru Institutions, Coimbatore</p>
-          <p class="project-desc">Certificate of Participation awarded to <strong>Adithya</strong> for participating in workshop on Agentic Software Systems during YUGAM 2026 Techno Cultural Fest.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Signatory:</strong> Dr. Vijilesh V (Associate Dean - Office of Students Affairs & HOD MCA)</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Yugam 2026</span>
-            <span class="tag">Agentic AI</span>
-            <span class="tag">Kumaraguru Institutions</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 7. Yugam 2026: Building LLMs Workshop (03 March 2026) -->
-      <div class="glass-card project-card cert-item" data-category="ai" data-date="2026-03-03" onclick="openCertModal('yugam_llm')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #ec4899;"><i class="fas fa-brain"></i></div>
-            <span class="project-badge" style="position:static;">03 March 2026</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">Building LLMs from Scratch – GenAI & Prompt Engineering</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">YUGAM 2026 • Kumaraguru Institutions, Coimbatore</p>
-          <p class="project-desc">Certificate of Participation awarded to <strong>Adithya</strong> for hands-on workshop on LLMs, GenAI & Prompt Engineering during YUGAM 2026.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Signatory:</strong> Dr. Vijilesh V (Associate Dean - Office of Students Affairs)</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Yugam 2026</span>
-            <span class="tag">LLMs & GenAI</span>
-            <span class="tag">Prompt Engineering</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8. iamneo / neo colab C Programming Course (05 February 2026) -->
-      <div class="glass-card project-card cert-item" data-category="ai" data-date="2026-02-05" onclick="openCertModal('iamneo_c')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #8b5cf6;"><i class="fas fa-code"></i></div>
-            <span class="project-badge" style="position:static;">05/02/2026</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">C Programming Course</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>iamneo (neo colab)</strong> — An NIIT Venture</p>
-          <p class="project-desc">Awarded to <strong>Adithya V</strong> from <strong>Kumaraguru College of Technology</strong> for completing C Programming Course requirements in First Semester.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Institution:</strong> Kumaraguru College of Technology (KCT)</div>
-            <div><strong>Signatory:</strong> Senthikumar TP</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">iamneo</span>
-            <span class="tag">KCT Coimbatore</span>
-            <span class="tag">C Programming</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9. KCT Coursera: Emerging Domains in Computing (04 November 2025) -->
-      <div class="glass-card project-card cert-item" data-category="ai" data-date="2025-11-04" onclick="openCertModal('kct_computing')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #06b6d4;"><i class="fas fa-microchip"></i></div>
-            <span class="project-badge" style="position:static;">Nov 4, 2025</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">Emerging Domains in Computing</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Kumaraguru College of Technology & Coursera</p>
-          <p class="project-desc">Completed by <strong>Adithya v</strong>. Authorized by Kumaraguru College of Technology, Coimbatore and offered through Coursera.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Signatory:</strong> Dr. Senthil J (Director, Kumaraguru School of Innovation)</div>
-            <div><strong>Verification URL:</strong> coursera.org/verify/W1EDP9VJY8DJ</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">KCT Coimbatore</span>
-            <span class="tag">Coursera</span>
-            <span class="tag">Computing Domains</span>
-          </div>
-          <div class="project-links">
-            <a href="https://coursera.org/verify/W1EDP9VJY8DJ" target="_blank" rel="noopener" class="link-btn">
-              <i class="fas fa-shield-halved"></i> Verify (W1EDP9VJY8DJ)
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 10. KCT Coursera: Emerging Domains (04 November 2025) -->
-      <div class="glass-card project-card cert-item" data-category="ai" data-date="2025-11-04" onclick="openCertModal('kct_domains')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #06b6d4;"><i class="fas fa-cubes"></i></div>
-            <span class="project-badge" style="position:static;">Nov 4, 2025</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">Emerging Domains</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Kumaraguru College of Technology & Coursera</p>
-          <p class="project-desc">Completed by <strong>Adithya v</strong>. Authorized by Kumaraguru College of Technology, Coimbatore and offered through Coursera.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Signatory:</strong> Dr. Senthil J (Director, Kumaraguru School of Innovation)</div>
-            <div><strong>Verification URL:</strong> coursera.org/verify/DFQBQ8SNFCMP</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">KCT Coimbatore</span>
-            <span class="tag">Coursera</span>
-            <span class="tag">Emerging Tech</span>
-          </div>
-          <div class="project-links">
-            <a href="https://coursera.org/verify/DFQBQ8SNFCMP" target="_blank" rel="noopener" class="link-btn">
-              <i class="fas fa-shield-halved"></i> Verify (DFQBQ8SNFCMP)
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 11. PEER Basic Life Support (29 October 2025) -->
-      <div class="glass-card project-card cert-item" data-category="cert" data-date="2025-10-29" onclick="openCertModal('peer_alert')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #10b981;"><i class="fas fa-heart-pulse"></i></div>
-            <span class="project-badge" style="position:static;">Issued: Oct 29, 2025</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">PEER Life Support & First Aid</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>ALERT NGO</strong></p>
-          <p class="project-desc">Completed by <strong>Adithya V</strong> for Basic Life Support and First Aid Course through Personal Empowerment in Emergency Response (PEER).</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Expiry:</strong> October 29, 2026 | <strong>Signatories:</strong> Dr. J.S. Rajkumar & Mr. Rajesh R Trivedi</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">ALERT NGO</span>
-            <span class="tag">First Aid</span>
-            <span class="tag">PEER</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 12. CBSE Class XII Senior Certificate (13 May 2025) -->
-      <div class="glass-card project-card cert-item" data-category="academic" data-date="2025-05-13" onclick="openCertModal('cbse12_doc')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #8b5cf6;"><i class="fas fa-graduation-cap"></i></div>
-            <span class="project-badge" style="position:static;">Declared: 13/05/2025</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">CBSE Class XII Certificate</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Central Board of Secondary Education</strong></p>
-          <p class="project-desc">Certified that <strong>ADITHYA V</strong> from SSVM School of Excellence Coimbatore TN passed Senior School Certificate Examination.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Headline Scores:</strong> Comp Sci: 99/100 (A1) | Math: 93/100 (A1) | English: 91/100 (A2)</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">CBSE Class 12</span>
-            <span class="tag">SSVM School</span>
-            <span class="tag">Result PASS</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 13. Google AI Essentials (19 April 2025) -->
-      <div class="glass-card project-card cert-item" data-category="cert" data-date="2025-04-19" onclick="openCertModal('google_ai')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #4285f4;"><i class="fab fa-google"></i></div>
-            <span class="project-badge" style="position:static;">Apr 19, 2025</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">Google AI Essentials</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Google & Coursera</strong></p>
-          <p class="project-desc">Completed by <strong>Adithya v</strong>. Online non-credit course authorized by Google and offered through Coursera.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Signatory:</strong> Amanda Brophy (Global Director of Google Career Certificates)</div>
-            <div><strong>Verification URL:</strong> coursera.org/verify/PZKJWB56XLKV</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Google AI</span>
-            <span class="tag">Coursera</span>
-            <span class="tag">Prompting</span>
-          </div>
-          <div class="project-links">
-            <a href="https://coursera.org/verify/PZKJWB56XLKV" target="_blank" rel="noopener" class="link-btn">
-              <i class="fas fa-shield-halved"></i> Verify at Coursera
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 14. Intel AI for Youth Program (19 November 2024) -->
-      <div class="glass-card project-card cert-item" data-category="ai" data-date="2024-11-19" onclick="openCertModal('intel_ai')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #0071c5;"><i class="fas fa-microchip"></i></div>
-            <span class="project-badge" style="position:static;">Nov 4 - Nov 19, 2024</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">AI for Youth Program in India</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Intel Digital Readiness + CBSE</strong></p>
-          <p class="project-desc">Participated by <strong>Adithya.V</strong> in AI for Youth Program in India.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Signatories:</strong> Shweta Khurana (Intel) & Dr. Biswajit Saha (Director Skill Education CBSE)</div>
-            <div><strong>Ref Code:</strong> AIFYPC20241119330</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Intel</span>
-            <span class="tag">CBSE</span>
-            <span class="tag">AI for Youth</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 15. Cambridge English Certificate in Advanced English (19 July 2024) -->
-      <div class="glass-card project-card cert-item" data-category="cert" data-date="2024-07-19" onclick="openCertModal('cambridge_b2')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #06b6d4;"><i class="fas fa-language"></i></div>
-            <span class="project-badge" style="position:static;">19 JULY 2024</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">Cambridge Advanced English</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Cambridge English Assessment</strong></p>
-          <p class="project-desc">Statement of Results for <strong>ADITHYA V</strong> (Entry: Coimbatore). Overall Score: <strong>167</strong> (CEFR Level B2).</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Component Scores:</strong> Speaking: 182 | Writing: 171 | Use of English: 169 | Listening: 163 | Reading: 150</div>
-            <div><strong>Ref / Verification:</strong> Centre Ref: IA102 2478 | Verif No: <span class="mono" style="color:var(--accent-cyan);">C8142391</span></div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">Cambridge English</span>
-            <span class="tag">CEFR Level B2</span>
-            <span class="tag">Score 167</span>
-          </div>
-          <div class="project-links">
-            <a href="https://cambridgeenglish.org/verifiers" target="_blank" rel="noopener" class="link-btn">
-              <i class="fas fa-shield-halved"></i> Verify at Cambridge
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 16. CBSE Class X Secondary Certificate (12 May 2023) -->
-      <div class="glass-card project-card cert-item" data-category="academic" data-date="2023-05-12" onclick="openCertModal('cbse10_doc')">
-        <div class="project-body" style="padding: 1.75rem;">
-          <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.75rem;">
-            <div style="font-size: 2rem; color: #06b6d4;"><i class="fas fa-school"></i></div>
-            <span class="project-badge" style="position:static;">Dated: 12-05-2023</span>
-          </div>
-          <h3 class="project-title" style="font-size:1.2rem;">CBSE Class X Certificate</h3>
-          <p style="color:var(--text-dim); font-size:0.85rem; margin-bottom:0.5rem;">Issuer: <strong>Central Board of Secondary Education</strong></p>
-          <p class="project-desc">Certified that <strong>V ADITHYA</strong> from Air Force School AFAC Redfields Coimbatore passed Secondary School Examination.</p>
-          <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:0.75rem;">
-            <div><strong>Headline Scores:</strong> Math Std: 85/100 (A2) | IT: 85/100 (B1) | English: 81/100 (B1)</div>
-          </div>
-          <div class="project-tags">
-            <span class="tag">CBSE Class 10</span>
-            <span class="tag">Air Force School</span>
-            <span class="tag">Result PASS</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- High-Impact Headline Academic Scores Section -->
-  <section class="timeline-section container" id="academics">
-    <div class="section-header">
-      <span class="section-tag">Academic Excellence</span>
-      <h2 class="section-title">CBSE Board Examination Achievements</h2>
-      <p class="section-desc">Headline performance summary for Senior School & Secondary School Examinations.</p>
-    </div>
-
-    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:2rem;">
-      
-      <!-- Class XII Headline Summary Card -->
-      <div class="glass-card" style="padding:2rem; border-color:rgba(139, 92, 246, 0.4);">
-        <div class="score-card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-          <span style="font-size:0.85rem; font-weight:600; text-transform:uppercase; color:var(--accent-cyan);">CBSE Class XII (2025)</span>
-          <span class="project-badge" style="background:rgba(139, 92, 246, 0.15); border-color:var(--accent-violet);">Declared: 13/05/2025</span>
-        </div>
-
-        <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:0.4rem;">Senior School Examination</h3>
-        <p style="color:var(--text-dim); font-size:0.875rem; margin-bottom:1.25rem;">SSVM School of Excellence, Coimbatore, Tamil Nadu</p>
-
-        <div class="score-bubbles-grid" style="display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem; margin-bottom:1.5rem;">
-          <div class="score-bubble" style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:0.85rem 1rem; border-radius:var(--radius-md);">
-            <div class="score-label" style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">COMPUTER SCIENCE</div>
-            <div class="score-num" style="font-size:1.35rem; font-weight:800; color:var(--accent-cyan);">99 / 100</div>
-            <div style="font-size:0.75rem; color:var(--accent-cyan); font-weight:600;">Grade A1</div>
-          </div>
-
-          <div class="score-bubble" style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:0.85rem 1rem; border-radius:var(--radius-md);">
-            <div class="score-label" style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">MATHEMATICS</div>
-            <div class="score-num" style="font-size:1.35rem; font-weight:800; color:var(--accent-violet);">93 / 100</div>
-            <div style="font-size:0.75rem; color:var(--accent-violet); font-weight:600;">Grade A1</div>
-          </div>
-
-          <div class="score-bubble" style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:0.85rem 1rem; border-radius:var(--radius-md);">
-            <div class="score-label" style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">ENGLISH CORE</div>
-            <div class="score-num" style="font-size:1.35rem; font-weight:800; color:var(--accent-pink);">91 / 100</div>
-            <div style="font-size:0.75rem; color:var(--accent-pink); font-weight:600;">Grade A2</div>
-          </div>
-
-          <div class="score-bubble" style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:0.85rem 1rem; border-radius:var(--radius-md);">
-            <div class="score-label" style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">PHYSICS & CHEM</div>
-            <div class="score-num" style="font-size:1.35rem; font-weight:800; color:var(--text-main);">86 & 81</div>
-            <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Grades A1 / A2</div>
-          </div>
-        </div>
-
-        <div class="score-footer" style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border-glass); padding-top:1rem;">
-          <span style="font-weight:700; color:var(--accent-cyan); font-size:0.9rem;"><i class="fas fa-circle-check"></i> Result: PASS</span>
-          <button class="btn btn-secondary" onclick="openCertModal('cbse12_doc')" style="padding:0.4rem 0.9rem; font-size:0.8rem;">
-            <i class="fas fa-shield-halved"></i> Verify Credential
-          </button>
-        </div>
-      </div>
-
-      <!-- Class X Headline Summary Card -->
-      <div class="glass-card" style="padding:2rem; border-color:rgba(6, 182, 212, 0.4);">
-        <div class="score-card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
-          <span style="font-size:0.85rem; font-weight:600; text-transform:uppercase; color:var(--accent-cyan);">CBSE Class X (2023)</span>
-          <span class="project-badge" style="background:rgba(6, 182, 212, 0.15); border-color:var(--accent-cyan);">Declared: 12/05/2023</span>
-        </div>
-
-        <h3 style="font-size:1.35rem; font-weight:800; margin-bottom:0.4rem;">Secondary School Examination</h3>
-        <p style="color:var(--text-dim); font-size:0.875rem; margin-bottom:1.25rem;">Air Force School AFAC Redfields, Coimbatore, Tamil Nadu</p>
-
-        <div class="score-bubbles-grid" style="display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem; margin-bottom:1.5rem;">
-          <div class="score-bubble" style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:0.85rem 1rem; border-radius:var(--radius-md);">
-            <div class="score-label" style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">MATH STANDARD</div>
-            <div class="score-num" style="font-size:1.35rem; font-weight:800; color:var(--accent-violet);">85 / 100</div>
-            <div style="font-size:0.75rem; color:var(--accent-violet); font-weight:600;">Grade A2</div>
-          </div>
-
-          <div class="score-bubble" style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:0.85rem 1rem; border-radius:var(--radius-md);">
-            <div class="score-label" style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">INFO TECH</div>
-            <div class="score-num" style="font-size:1.35rem; font-weight:800; color:var(--accent-cyan);">85 / 100</div>
-            <div style="font-size:0.75rem; color:var(--accent-cyan); font-weight:600;">Grade B1</div>
-          </div>
-
-          <div class="score-bubble" style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:0.85rem 1rem; border-radius:var(--radius-md);">
-            <div class="score-label" style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">ENGLISH LIT</div>
-            <div class="score-num" style="font-size:1.35rem; font-weight:800; color:var(--accent-pink);">81 / 100</div>
-            <div style="font-size:0.75rem; color:var(--accent-pink); font-weight:600;">Grade B1</div>
-          </div>
-
-          <div class="score-bubble" style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:0.85rem 1rem; border-radius:var(--radius-md);">
-            <div class="score-label" style="font-size:0.75rem; color:var(--text-dim); font-weight:600;">SOCIAL SCIENCE</div>
-            <div class="score-num" style="font-size:1.35rem; font-weight:800; color:var(--text-main);">78 / 100</div>
-            <div style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">Grade B2</div>
-          </div>
-        </div>
-
-        <div class="score-footer" style="display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border-glass); padding-top:1rem;">
-          <span style="font-weight:700; color:var(--accent-cyan); font-size:0.9rem;"><i class="fas fa-circle-check"></i> Result: PASS</span>
-          <button class="btn btn-secondary" onclick="openCertModal('cbse10_doc')" style="padding:0.4rem 0.9rem; font-size:0.8rem;">
-            <i class="fas fa-shield-halved"></i> Verify Credential
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Functional Contact Section -->
-  <section class="contact-section container" id="contact">
-    <div class="section-header">
-      <span class="section-tag">Get In Touch</span>
-      <h2 class="section-title">Connect with Adithya V</h2>
-      <p class="section-desc">Send a message directly to Adithya V or connect via LinkedIn.</p>
-    </div>
-
-    <div class="contact-container">
-      <div class="glass-card">
-        <h3 style="font-size:1.4rem; font-weight:700; margin-bottom:1rem;">Candidate Information</h3>
-        
-        <div class="contact-info-list">
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-user"></i></div>
-            <div>
-              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">Full Name & Reg. No</div>
-              <div style="font-weight:600;">Adithya V (Reg No: 25BCS016)</div>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-            <div>
-              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">Email Address</div>
-              <a href="mailto:adithya210207.v@gmail.com" onclick="triggerGmailApp('Inquiry for Adithya V', ''); return false;" style="font-weight:600; color:var(--accent-cyan); text-decoration:none;">
-                adithya210207.v@gmail.com <i class="fas fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon" style="color:#0a66c2;"><i class="fab fa-linkedin"></i></div>
-            <div>
-              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">LinkedIn Profile</div>
-              <a href="https://www.linkedin.com/in/adithya210207" target="_blank" rel="noopener" style="font-weight:600; color:var(--accent-cyan); text-decoration:none;">
-                linkedin.com/in/adithya210207 <i class="fas fa-external-link-alt" style="font-size:0.75rem;"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-building-columns"></i></div>
-            <div>
-              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">College Institution</div>
-              <div style="font-weight:600;">Kumaraguru College of Technology (KCT)</div>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon"><i class="fas fa-school"></i></div>
-            <div>
-              <div style="font-size:0.8rem; color:var(--text-dim); text-transform:uppercase;">Class XII School</div>
-              <div style="font-weight:600;">SSVM School of Excellence, Coimbatore</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Functional Contact Form with Clear Input Contrast -->
-      <div class="glass-card">
-        <form id="contact-form">
-          <div class="form-group">
-            <label class="form-label" for="contact-name">Your Name</label>
-            <input type="text" id="contact-name" class="form-input" placeholder="Enter your full name..." required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="contact-email">Email Address</label>
-            <input type="email" id="contact-email" class="form-input" placeholder="name@example.com" required>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="contact-message">Message</label>
-            <textarea id="contact-message" class="form-textarea" placeholder="Type your message for Adithya V..." required></textarea>
-          </div>
-
-          <a id="send-msg-link" href="mailto:adithya210207.v@gmail.com" class="btn btn-primary" style="width:100%; justify-content:center; padding: 1rem 1.75rem;">
-            Send Message <i class="fas fa-paper-plane"></i>
-          </a>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Interactive Document Modal Popup -->
-  <div class="modal-backdrop" id="modal-backdrop">
-    <div class="glass-card modal-card">
-      <button class="modal-close-btn" id="modal-close"><i class="fas fa-xmark"></i></button>
-      
-      <div style="margin-bottom: 1rem;">
-        <span id="modal-category" class="section-tag" style="margin-bottom:0.2rem;">Category</span>
-        <h3 id="modal-title" style="font-size:1.6rem; font-weight:800;">Credential Title</h3>
-        <p id="modal-date" class="mono" style="color:var(--accent-pink); font-size:0.85rem; margin-top:0.2rem;"></p>
-      </div>
-
-      <div style="background:var(--bg-glass); border:1px solid var(--border-glass); padding:1.25rem; border-radius:var(--radius-md); margin-bottom:1.25rem;">
-        <p id="modal-desc" style="color:var(--text-main); font-size:0.95rem; line-height:1.6;"></p>
-      </div>
-
-      <h4 style="font-size:0.95rem; font-weight:700; margin-bottom:0.5rem;">Verified Details:</h4>
-      <div id="modal-details" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;"></div>
-
-      <div id="modal-link-container"></div>
     </div>
   </div>
+  <ul class="contact__links" data-fade>
+    <li><a href="https://www.linkedin.com/in/adithya210207/" target="_blank" rel="noopener"><span class="label">LinkedIn</span><span class="v">in/adithya210207 <i aria-hidden="true">↗</i></span></a></li>
+    <li><a href="https://github.com/Adithya210207" target="_blank" rel="noopener"><span class="label">GitHub</span><span class="v">Adithya210207 <i aria-hidden="true">↗</i></span></a></li>
+    <li><a href="https://huggingface.co/Adithya210207-Ryuu" target="_blank" rel="noopener"><span class="label">Hugging Face</span><span class="v">Adithya210207-Ryuu <i aria-hidden="true">↗</i></span></a></li>
+    <li><a href="https://idealab.kct.ac.in/" target="_blank" rel="noopener"><span class="label">Site I built (professional work)</span><span class="v">KCT IDEA Lab <i aria-hidden="true">↗</i></span></a></li>
+  </ul>
+</section>
+</main>
 
-  <!-- Toast Notification -->
-  <div class="toast" id="toast-notification">
-    <i class="fas fa-circle-check" style="color:var(--accent-cyan); font-size:1.2rem;"></i>
-    <span id="toast-message">Action completed successfully.</span>
+<footer class="foot">
+  <p>© 2026 Adithya V</p>
+  <p>Designed and written by hand in Coimbatore</p>
+  <a href="#hero">Back to top ↑</a>
+</footer>
+
+<!-- preview that follows the cursor over the credentials list -->
+<figure class="peek" id="peek" aria-hidden="true"><img alt=""><div class="paper" hidden><span></span><b></b><span></span></div></figure>
+
+<!-- credential viewer -->
+<dialog class="lb" id="lb" aria-labelledby="lb-title">
+  <div class="lb__top"><p class="label" id="lb-count"></p><button class="link" id="lb-close" type="button">Close</button></div>
+  <div class="lb__stage"><img id="lb-img" alt=""><div class="paper" id="lb-paper" hidden><span></span><b></b><span></span></div></div>
+  <div class="lb__bar">
+    <div><h3 id="lb-title"></h3><p class="lb__meta" id="lb-meta"></p></div>
+    <div class="lb__act"><button class="link" id="lb-prev" type="button">← Previous</button><button class="link" id="lb-next" type="button">Next →</button><a class="link" id="lb-verify" target="_blank" rel="noopener" hidden>Verify ↗</a><a class="pill" id="lb-open" target="_blank" rel="noopener">Open original ↗</a></div>
   </div>
+</dialog>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container" style="display:flex; flex-direction:column; align-items:center; gap:1rem;">
-      <div style="display:flex; gap:1.5rem; font-size:1.4rem;">
-        <a href="https://www.linkedin.com/in/adithya210207" target="_blank" rel="noopener" style="color:var(--text-muted);" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <p>&copy; 2026 Adithya V (Reg No: 25BCS016). Official Portfolio & Verified Credentials.</p>
-    </div>
-  </footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <!-- Application Logic -->
-  <script src="app.js?v=2.2"></script>
+<script src="libs/gsap.min.js"></script>
+<script src="libs/ScrollTrigger.min.js"></script>
+<script src="libs/lenis.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
