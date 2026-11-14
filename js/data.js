@@ -46,8 +46,7 @@ window.DATA = {
         desc: "The official website of the AICTE IDEA Lab at Kumaraguru College of Technology (KCT), Coimbatore, designed, built and maintained solo by Adithya V, with its lab equipment catalogue and hackathon portal.",
         about: [
           "idealab.kct.ac.in is the official website of the AICTE IDEA Lab at Kumaraguru College of Technology, Coimbatore. I designed it, built it and keep it running on my own, starting in my third semester.",
-          "Besides the lab's facilities, activities, benefits and people, the site runs a lab equipment catalogue of 161 items and a hackathon portal for problem statements, guidelines, team registration and submissions.",
-          "The portal ran the Smart City Hackathon 2026 with IEEE Smart Cities, from 8 August to 13 October, which I helped conduct as its software builder and support."
+          "The site's hackathon portal ran the Smart City Hackathon 2026 with IEEE Smart Cities, from 8 August to 13 October, which I helped conduct as its software builder and support."
         ],
         related: ["pawfinder","automobile-lab"]
       },
