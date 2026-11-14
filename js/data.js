@@ -41,6 +41,16 @@ window.DATA = {
       links: [['View the code', 'https://github.com/Adithya210207/ryuu-explainer-ai']]
     },
     {
+      slug: "kct-idea-lab", page: {
+        title: "KCT IDEA Lab website (idealab.kct.ac.in) — built by Adithya V",
+        desc: "The official website of the AICTE IDEA Lab at Kumaraguru College of Technology (KCT), Coimbatore, designed, built and maintained solo by Adithya V, with its lab equipment catalogue and hackathon portal.",
+        about: [
+          "idealab.kct.ac.in is the official website of the AICTE IDEA Lab at Kumaraguru College of Technology, Coimbatore. I designed it, built it and keep it running on my own, starting in my third semester.",
+          "Besides the lab's facilities, activities, benefits and people, the site runs a lab equipment catalogue of 161 items and a hackathon portal for problem statements, guidelines, team registration and submissions.",
+          "The portal ran the Smart City Hackathon 2026 with IEEE Smart Cities, from 8 August to 13 October, which I helped conduct as its software builder and support."
+        ],
+        related: ["pawfinder","automobile-lab"]
+      },
       art: 'window', title: 'KCT IDEA Lab website', preview: 'img/preview/idealab.jpg', kind: 'College website, built solo',
       desc: 'The official website of my college\'s AICTE IDEA Lab. I designed it, built it and keep it running on my own, including the hackathon portal behind the Smart City Hackathon 2026, which I helped conduct as its software builder.',
       facts: ['Designed, built and maintained alone in semester three', 'A hackathon portal for problem statements, guidelines, team registration and submissions', 'Smart City Hackathon 2026, run with IEEE Smart Cities from 8 August to 13 October'],
@@ -75,7 +85,7 @@ window.DATA = {
           "The platform covers the whole journey: a shelter directory, guided adoption applications with live status, short-term fostering, volunteering, chat with shelters, rescue reports, emergency helplines and a library of care articles.",
           "It is built with Node.js and Express on SQLite, with live chat over Socket.IO, and also ships as a Windows desktop app built with Electron."
         ],
-        related: ["automobile-lab"]
+        related: ["kct-idea-lab","automobile-lab"]
       },
       art: 'paw', title: 'PawFinder', preview: 'img/preview/pawfinder.jpg', kind: 'Web platform, live',
       desc: 'An adoption and rescue platform for India that connects people with stray dogs, shelters, emergency helplines and foster programmes.',
