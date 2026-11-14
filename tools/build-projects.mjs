@@ -9,7 +9,7 @@ import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const SITE = 'https://adithya210207.github.io/';
+const SITE = 'https://adithya210207.github.io/portfolio-website/';
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const ctx = { window: {} };

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://adithya210207.github.io/sitemap.xml
+Sitemap: https://adithya210207.github.io/portfolio-website/sitemap.xml
