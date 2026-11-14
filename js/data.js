@@ -42,9 +42,9 @@ window.DATA = {
     },
     {
       art: 'window', title: 'KCT IDEA Lab website', preview: 'img/preview/idealab.jpg', kind: 'College website, built solo',
-      desc: 'The official website of my college\'s AICTE IDEA Lab. I designed it, built it and keep it running on my own, including the hackathon portal behind the Industry Connect Hackathon 2026 and the Smart City Hackathon 2026, which I helped conduct as their software builder.',
-      facts: ['Designed, built and maintained alone in semester three', 'A hackathon portal for problem statements, guidelines, team registration and submissions', 'Industry Connect Hackathon 2026 at KCT on 10 and 11 April', 'Smart City Hackathon 2026, run with IEEE Smart Cities from 8 August to 13 October'],
-      shots: [['img/work/idealab-home.jpg', 'The KCT AICTE IDEA Lab home page'], ['img/work/idealab-hackathon.jpg', 'The Industry Connect Hackathon 2026 page I built on the IDEA Lab site']],
+      desc: 'The official website of my college\'s AICTE IDEA Lab. I designed it, built it and keep it running on my own, including the hackathon portal behind the Smart City Hackathon 2026, which I helped conduct as its software builder.',
+      facts: ['Designed, built and maintained alone in semester three', 'A hackathon portal for problem statements, guidelines, team registration and submissions', 'Smart City Hackathon 2026, run with IEEE Smart Cities from 8 August to 13 October'],
+      shots: [['img/work/idealab-home.jpg', 'The KCT AICTE IDEA Lab home page'], ['img/work/idealab-hackathon.jpg', 'A hackathon page on the IDEA Lab website I built']],
       stack: 'Web design · Front end · Deployment · Support',
       links: [['Visit the site', 'https://idealab.kct.ac.in/']]
     },
@@ -188,7 +188,6 @@ window.DATA = {
     ['2026', 'Smart City Hackathon 2026', 'Helped conduct the IDEA Lab and IEEE Smart Cities hackathon on local urban challenges, from 8 August to 13 October, as its software builder, running the portal for problem statements, team registrations and submissions.'],
     ['2026', 'Five fine-tuned models and TQQ Chatbox', 'Built datasets from every episode\'s subtitles plus hand-written chats, fine-tuned five Llama-3 8B models with QLoRA on Google Colab, and published them on Hugging Face inside an offline JavaFX app.'],
     ['2026', 'Firmware internship at Axiswin Technologies', 'Bare-metal firmware for an ARM Cortex-M4 intelligent battery monitor: RTOS tasks, PWM for electric vehicles, and GPIO, ADC, DAC and USART drivers.'],
-    ['2026', 'Industry Connect Hackathon 2026', 'Built and ran the IDEA Lab portal for KCT\'s Industry Connect Hackathon on 10 and 11 April, with its problem statements, team registration and submissions.'],
     ['2026', 'A year of traineeships and workshops', 'Artificial intelligence, data analytics, full-stack MERN, UI/UX, digital marketing and finance with Maiyam, and two Yugam workshops on agentic AI and building LLMs from scratch.'],
     ['2025', 'Computer Science and Engineering at KCT', 'Began a BE at Kumaraguru College of Technology, Coimbatore. Register number 25BCS016.'],
     ['2025', 'School topper in Computer Science', 'CBSE Class XII at SSVM School of Excellence, with 99 out of 100 in Computer Science, 93 in Mathematics and 91 in English.'],
