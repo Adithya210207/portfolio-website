@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automobile Lab — Arduino speedometer to adaptive cruise control | Adithya V</title>
+<meta name="description" content="Automobile Lab by Adithya V: an Arduino and STM32 speedometer grown version by version into adaptive cruise control, with gear modes, a laser time-of-flight sensor and a live Web Serial dashboard.">
+<meta name="author" content="Adithya V">
+<link rel="canonical" href="https://adithya210207.github.io/projects/automobile-lab/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Adithya V">
+<meta property="og:url" content="https://adithya210207.github.io/projects/automobile-lab/">
+<meta property="og:title" content="Automobile Lab — Arduino speedometer to adaptive cruise control | Adithya V">
+<meta property="og:description" content="Automobile Lab by Adithya V: an Arduino and STM32 speedometer grown version by version into adaptive cruise control, with gear modes, a laser time-of-flight sensor and a live Web Serial dashboard.">
+<meta property="og:image" content="https://adithya210207.github.io/img/work/automobile-dashboard.jpg">
+<meta property="og:image:alt" content="The live speedometer dashboard in Sport mode at 56 km/h">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automobile Lab — Arduino speedometer to adaptive cruise control | Adithya V">
+<meta name="twitter:description" content="Automobile Lab by Adithya V: an Arduino and STM32 speedometer grown version by version into adaptive cruise control, with gear modes, a laser time-of-flight sensor and a live Web Serial dashboard.">
+<meta name="twitter:image" content="https://adithya210207.github.io/img/work/automobile-dashboard.jpg">
+<meta name="theme-color" content="#f4f1ea">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../project.css">
+<script>try{var t=localStorage.getItem('folio-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Automobile Lab","url":"https://adithya210207.github.io/projects/automobile-lab/","description":"Automobile Lab by Adithya V: an Arduino and STM32 speedometer grown version by version into adaptive cruise control, with gear modes, a laser time-of-flight sensor and a live Web Serial dashboard.","image":"https://adithya210207.github.io/img/work/automobile-dashboard.jpg","applicationCategory":"DeveloperApplication","author":{"@type":"Person","name":"Adithya V","alternateName":["Ryuu","Adithya210207"],"url":"https://adithya210207.github.io/"},"sameAs":["https://github.com/Adithya210207/automobile-lab-projects"],"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Adithya V","item":"https://adithya210207.github.io/"},{"@type":"ListItem","position":2,"name":"Work","item":"https://adithya210207.github.io/#work"},{"@type":"ListItem","position":3,"name":"Automobile Lab","item":"https://adithya210207.github.io/projects/automobile-lab/"}]}</script>
+</head>
+<body class="pp">
+<header class="pp-top">
+  <a class="pp-name" href="../../">Adithya V</a>
+  <nav aria-label="Site"><a href="../../#work">All work</a><a href="../../#about">About</a><a href="../../resume.pdf">Résumé</a><a href="../../#contact">Contact</a></nav>
+</header>
+
+<main>
+  <nav class="pp-crumb" aria-label="Breadcrumb"><a href="../../">Adithya V</a><span aria-hidden="true">/</span><a href="../../#work">Work</a><span aria-hidden="true">/</span><span aria-current="page">Automobile Lab</span></nav>
+
+  <header class="pp-head">
+    <p class="label">06 · Hardware and web interface</p>
+    <h1>Automobile Lab</h1>
+    <p class="pp-lead">An Arduino speedometer that grew, version by version, into adaptive cruise control with a live web dashboard over serial.</p>
+    <p class="pp-by">Built by <a href="../../">Adithya V</a>, computer science student at KCT, Coimbatore.</p>
+    <div class="pp-links"><a class="pp-btn" href="https://github.com/Adithya210207/automobile-lab-projects" target="_blank" rel="noopener">View the code <span aria-hidden="true">↗</span></a></div>
+  </header>
+
+  <div class="pp-shots pp-shots--1">
+    <figure><img src="../../img/work/automobile-dashboard.jpg" alt="The live speedometer dashboard in Sport mode at 56 km/h" width="1400" height="805" decoding="async"><figcaption>The live speedometer dashboard in Sport mode at 56 km/h</figcaption></figure>
+  </div>
+
+  <div class="pp-body">
+    <section aria-labelledby="about-h">
+      <h2 class="pp-h" id="about-h">About Automobile Lab</h2>
+      <p>Automobile Lab started as a throttle reading and grew, version by version, into adaptive cruise control. A live dashboard in the browser reads the board over Web Serial and shows speed on an animated gauge.</p>
+      <p>It has Eco, Normal and Sport gear modes, forward and reverse with reverse capped at 5 km/h, brake input, and cruise control.</p>
+      <p>Adaptive cruise keeps a two-second gap to the vehicle ahead using a laser time-of-flight sensor, or follows a target speed set on a second potentiometer, with rate limiting so the speed changes smoothly.</p>
+    </section>
+    <aside>
+      <h2 class="pp-h">Highlights</h2>
+      <ul class="pp-facts"><li>Six versions, from a throttle reading to cruise control</li><li>Three gear modes with brake and cruise inputs</li><li>Laser time-of-flight sensor for distance keeping</li></ul>
+      <h2 class="pp-h">Made with</h2>
+      <p class="pp-stack">Arduino C++ · Web Serial · JavaScript</p>
+    </aside>
+  </div>
+
+  <section class="pp-related" aria-labelledby="rel-h">
+    <h2 class="pp-h" id="rel-h">Related work</h2>
+    <div class="pp-cards"><a class="pp-card" href="../pawfinder/"><img src="../../img/preview/pawfinder.jpg" alt="" loading="lazy" decoding="async"><span><b>PawFinder</b><small>Web platform, live</small></span></a><a class="pp-card" href="../cs-gpt/"><img src="../../img/preview/csgpt.jpg" alt="" loading="lazy" decoding="async"><span><b>CS GPT for CBSE 11 &amp; 12</b><small>Learning tool</small></span></a></div>
+  </section>
+
+  <section class="pp-all" aria-labelledby="all-h">
+    <h2 class="pp-h" id="all-h">More projects by Adithya V</h2>
+    <ul><li><a href="../tqq-chatbox/">TQQ Chatbox</a><span>Five fine-tuned models, one app</span></li><li><a href="../ryuu-explainer-ai/">Ryuu Explainer AI</a><span>Offline AI assistant</span></li><li><a href="../kct-idea-lab/">KCT IDEA Lab website</a><span>College website, built solo</span></li><li><a href="../personality-ai-chatbox/">Personality AI</a><span>Character chatbot</span></li><li><a href="../pawfinder/">PawFinder</a><span>Web platform, live</span></li><li><a href="../cs-gpt/">CS GPT for CBSE 11 &amp; 12</a><span>Learning tool</span></li><li><a href="../ryuu-v1/">Ryuu v1 models</a><span>Five open models</span></li></ul>
+  </section>
+</main>
+
+<footer class="pp-foot">
+  <a href="../../">← Back to the portfolio</a>
+  <span>© 2026 Adithya V · Coimbatore, India</span>
+</footer>
+</body>
+</html>
