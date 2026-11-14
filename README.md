@@ -2,7 +2,7 @@
 
 My personal portfolio: who I am, the projects I've built, and my certificates and credentials.
 
-**Live:** https://adithya210207.github.io/
+**Live:** https://adithya210207.github.io/portfolio-website/
 
 ---
 
