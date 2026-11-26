@@ -11,7 +11,7 @@
 .pp-crumb a { text-decoration: none; }
 .pp-crumb a:hover { color: var(--ink); }
 
-.pp-head { padding: clamp(36px, 7vw, 96px) 0 clamp(32px, 5vw, 64px); max-width: 1100px; }
+.pp-head { padding: clamp(32px, 6vw, 80px) 0 clamp(28px, 4vw, 48px); max-width: 1100px; }
 .pp-head h1 { margin: 18px 0 0; font: 400 clamp(54px, 10vw, 148px)/.9 var(--serif); letter-spacing: -.035em; }
 .pp-lead { margin: 28px 0 0; max-width: 34ch; font: 400 clamp(22px, 2.4vw, 32px)/1.25 var(--serif); color: var(--ink); }
 .pp-by { margin: 18px 0 0; color: var(--mute); font-size: 15px; }
@@ -27,10 +27,10 @@
 .pp-shots img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9.2; object-fit: cover; object-position: top; border-radius: 6px; background: var(--card);
   box-shadow: 0 1px 0 var(--line), 0 30px 70px -40px rgba(0, 0, 0, .5); }
 .pp-shots figcaption { margin-top: 10px; font-size: 13px; color: var(--mute); }
-@media (min-width: 900px) { .pp-shots--2 { grid-template-columns: 1.15fr 1fr; align-items: start; } .pp-shots--2 figure:last-child { margin-top: 10%; } }
+@media (min-width: 900px) { .pp-shots--2 { grid-template-columns: 1fr 1fr; align-items: start; } }
 
 .pp-h { margin: 0 0 18px; font-size: 12px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--mute); }
-.pp-body { display: grid; gap: 48px; padding: clamp(56px, 8vw, 110px) 0 0; border-top: 1px solid var(--line); margin-top: clamp(48px, 7vw, 96px); }
+.pp-body { display: grid; gap: 48px; padding: clamp(32px, 4vw, 52px) 0 0; border-top: 1px solid var(--line); margin-top: clamp(32px, 4vw, 52px); }
 .pp-body section p { max-width: 62ch; margin: 0 0 18px; font-size: 18px; color: var(--soft); }
 .pp-body section p:first-of-type { color: var(--ink); }
 .pp-facts { list-style: none; padding: 0; margin: 0 0 36px; }
@@ -39,7 +39,7 @@
 .pp-stack { margin: 0; color: var(--ink); }
 @media (min-width: 900px) { .pp-body { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(48px, 7vw, 120px); } }
 
-.pp-related, .pp-all { padding-top: clamp(56px, 8vw, 100px); }
+.pp-related, .pp-all { padding-top: clamp(40px, 5vw, 68px); }
 .pp-cards { display: grid; gap: 16px; }
 @media (min-width: 700px) { .pp-cards { grid-template-columns: 1fr 1fr; } }
 .pp-card { display: flex; align-items: center; gap: 18px; padding: 14px; border: 1px solid var(--line); border-radius: 10px; text-decoration: none; transition: border-color .2s, transform .2s; }
@@ -53,7 +53,7 @@
 .pp-all a:hover { color: var(--accent); }
 .pp-all span { font-size: 14px; color: var(--mute); text-align: right; }
 
-.pp-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: clamp(64px, 9vw, 120px); padding: 22px 0 32px; border-top: 1px solid var(--line); font-size: 14px; color: var(--mute); }
+.pp-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: clamp(48px, 6vw, 80px); padding: 22px 0 32px; border-top: 1px solid var(--line); font-size: 14px; color: var(--mute); }
 .pp-foot a { text-decoration: none; color: var(--ink); }
 .pp :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 @media (prefers-reduced-motion: reduce) { .pp-btn, .pp-card { transition: none; } .pp-btn:hover, .pp-card:hover { transform: none; } }
