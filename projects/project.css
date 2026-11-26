@@ -2,7 +2,7 @@
 .pp { padding: 0 var(--pad); }
 .pp a { color: inherit; }
 .pp-top { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 26px 0; }
-.pp-name { font: 400 26px/1 var(--serif); text-decoration: none; letter-spacing: -.01em; }
+.pp-name { font: 400 26px/1 var(--serif); text-decoration: none; letter-spacing: -.01em; white-space: nowrap; }
 .pp-top nav { display: flex; flex-wrap: wrap; gap: 6px 26px; font-size: 15px; }
 .pp-top nav a { text-decoration: none; color: var(--soft); transition: color .2s; }
 .pp-top nav a:hover { color: var(--ink); }
@@ -11,12 +11,12 @@
 .pp-crumb a { text-decoration: none; }
 .pp-crumb a:hover { color: var(--ink); }
 
-.pp-head { padding: clamp(32px, 6vw, 80px) 0 clamp(28px, 4vw, 48px); max-width: 1100px; }
-.pp-head h1 { margin: 18px 0 0; font: 400 clamp(54px, 10vw, 148px)/.9 var(--serif); letter-spacing: -.035em; }
-.pp-lead { margin: 28px 0 0; max-width: 34ch; font: 400 clamp(22px, 2.4vw, 32px)/1.25 var(--serif); color: var(--ink); }
+.pp-head { padding: clamp(32px, 6vw, 80px) 0 clamp(28px, 4vw, 48px); max-width: 1100px; margin: 0 auto; text-align: center; }
+.pp-head h1 { margin: 18px 0 0; text-wrap: balance; font: 400 clamp(54px, 10vw, 148px)/.9 var(--serif); letter-spacing: -.035em; }
+.pp-lead { margin: 28px auto 0; max-width: 38ch; text-wrap: balance; font: 400 clamp(22px, 2.4vw, 32px)/1.25 var(--serif); color: var(--ink); }
 .pp-by { margin: 18px 0 0; color: var(--mute); font-size: 15px; }
 .pp-by a { text-decoration: none; border-bottom: 1px solid var(--line); }
-.pp-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin-top: 30px; }
+.pp-links { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px 26px; margin-top: 30px; }
 .pp-btn { display: inline-flex; gap: 8px; padding: 12px 22px; border-radius: 999px; background: var(--ink); color: var(--paper) !important; text-decoration: none; font-weight: 500; transition: transform .2s; }
 .pp-btn:hover { transform: translateY(-2px); }
 .pp-link { text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
