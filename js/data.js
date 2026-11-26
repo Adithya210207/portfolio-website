@@ -4,25 +4,6 @@ window.DATA = {
 
   work: [
     {
-      slug: "tqq-chatbox", page: {
-        title: "TQQ Chatbox — offline AI chat with the five Nakano sisters | Adithya V",
-        desc: "TQQ Chatbox by Adithya V: a JavaFX desktop app where Ichika, Nino, Miku, Yotsuba and Itsuki from The Quintessential Quintuplets are each their own fine-tuned Llama-3 8B model, running fully offline with Ollama.",
-        about: [
-          "Character chatbots usually run one model in five costumes: they break character, invent memories and need the cloud. In TQQ Chatbox each of the Nakano sisters, Ichika, Nino, Miku, Yotsuba and Itsuki, is her own fine-tuned language model, faithful to The Quintessential Quintuplets and running entirely on a laptop.",
-          "The data: every episode's subtitles became one master transcript, cut into each character's real scenes, plus 80 to 212 hand-written chats per character covering facts, traps and \"I'm not sure\".",
-          "The training: QLoRA on Llama-3 8B with Unsloth on a free Colab T4, in 4-bit at rank 16 for two epochs. Each model is merged and exported as an 8.5 GB GGUF file for Ollama.",
-          "The safety checks: before you see a reply, word rules and a phi4-mini judge check it for wrong facts and invented memories, and quietly ask the model again when it slips. In testing the judge refused 69 of 70 invented memories with 0 false alarms out of 70."
-        ],
-        related: ["ryuu-v1","personality-ai-chatbox"]
-      },
-      art: 'five', featured: true, title: 'TQQ Chatbox', preview: 'img/preview/tqq.jpg', kind: 'Five fine-tuned models, one app',
-      desc: 'A desktop chat app where each of the five Nakano sisters from The Quintessential Quintuplets is her own fine-tuned language model, not one model wearing five costumes. It runs fully offline, and two hidden safety checks re-ask her whenever a reply gets a fact wrong or invents a memory.',
-      facts: ['Five Llama-3 8B models, fine-tuned with QLoRA on 700 to 890 chats each', 'A phi4-mini judge caught 69 of 70 invented memories in testing', 'Beat the untuned model in blind tests for every sister, for example 83 to 11 for Ichika'],
-      shots: [['img/work/tqq-home.jpg', 'TQQ Chatbox home screen: five portrait panels, one for each Nakano sister'], ['img/work/tqq-chat.jpg', 'A chat with Miku in TQQ Chatbox, each reply led by an italic scene line']],
-      stack: 'Java · JavaFX · Ollama · Llama-3 8B · QLoRA · Unsloth',
-      links: [['View the code', 'https://github.com/Adithya210207/tqq-chatbox'], ['See the models', 'https://huggingface.co/Adithya210207-Ryuu']]
-    },
-    {
       "slug": "serene-mind-ai",
       "page": {
         "title": "Serene Mind AI — private offline mental-wellness companion for students | Adithya V",
@@ -38,6 +19,7 @@ window.DATA = {
         ]
       },
       "art": "chat",
+      "featured": true,
       "title": "Serene Mind AI",
       "preview": "img/preview/serene.jpg",
       "kind": "Wellness companion, own model",
@@ -68,6 +50,25 @@ window.DATA = {
           "https://huggingface.co/Adithya210207-Ryuu/Serene_ryuu_v1-GGUF"
         ]
       ]
+    },
+    {
+      slug: "tqq-chatbox", page: {
+        title: "TQQ Chatbox — offline AI chat with the five Nakano sisters | Adithya V",
+        desc: "TQQ Chatbox by Adithya V: a JavaFX desktop app where Ichika, Nino, Miku, Yotsuba and Itsuki from The Quintessential Quintuplets are each their own fine-tuned Llama-3 8B model, running fully offline with Ollama.",
+        about: [
+          "Character chatbots usually run one model in five costumes: they break character, invent memories and need the cloud. In TQQ Chatbox each of the Nakano sisters, Ichika, Nino, Miku, Yotsuba and Itsuki, is her own fine-tuned language model, faithful to The Quintessential Quintuplets and running entirely on a laptop.",
+          "The data: every episode's subtitles became one master transcript, cut into each character's real scenes, plus 80 to 212 hand-written chats per character covering facts, traps and \"I'm not sure\".",
+          "The training: QLoRA on Llama-3 8B with Unsloth on a free Colab T4, in 4-bit at rank 16 for two epochs. Each model is merged and exported as an 8.5 GB GGUF file for Ollama.",
+          "The safety checks: before you see a reply, word rules and a phi4-mini judge check it for wrong facts and invented memories, and quietly ask the model again when it slips. In testing the judge refused 69 of 70 invented memories with 0 false alarms out of 70."
+        ],
+        related: ["ryuu-v1","personality-ai-chatbox"]
+      },
+      art: 'five', title: 'TQQ Chatbox', preview: 'img/preview/tqq.jpg', kind: 'Five fine-tuned models, one app',
+      desc: 'A desktop chat app where each of the five Nakano sisters from The Quintessential Quintuplets is her own fine-tuned language model, not one model wearing five costumes. It runs fully offline, and two hidden safety checks re-ask her whenever a reply gets a fact wrong or invents a memory.',
+      facts: ['Five Llama-3 8B models, fine-tuned with QLoRA on 700 to 890 chats each', 'A phi4-mini judge caught 69 of 70 invented memories in testing', 'Beat the untuned model in blind tests for every sister, for example 83 to 11 for Ichika'],
+      shots: [['img/work/tqq-home.jpg', 'TQQ Chatbox home screen: five portrait panels, one for each Nakano sister'], ['img/work/tqq-chat.jpg', 'A chat with Miku in TQQ Chatbox, each reply led by an italic scene line']],
+      stack: 'Java · JavaFX · Ollama · Llama-3 8B · QLoRA · Unsloth',
+      links: [['View the code', 'https://github.com/Adithya210207/tqq-chatbox'], ['See the models', 'https://huggingface.co/Adithya210207-Ryuu']]
     },
     {
       slug: "ryuu-explainer-ai", page: {
