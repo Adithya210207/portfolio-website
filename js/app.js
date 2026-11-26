@@ -162,6 +162,8 @@
 
   /* ── render: credentials ── */
   const certs = D.certs, LIMIT = 10;
+  // the "Certificates" figure in About always matches the list
+  $$('[data-certs]').forEach(b => { b.textContent = certs.length; });
   const CATS = ['All', 'AI', 'Development', 'Beyond code'];
   const certList = $('#cert-list'), filters = $('#filters'), more = $('#cert-more');
   let cat = 'All', expanded = false;
