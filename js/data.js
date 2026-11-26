@@ -179,11 +179,11 @@ window.DATA = {
       "shots": [
         [
           "img/work/aniverse-home.jpg",
-          "The Ryuu Aniverse home screen with character panels and the gallery of all characters"
+          "The Ryuu Aniverse v2 home screen with character portraits and the gallery of all 100 characters"
         ],
         [
           "img/work/aniverse-chat.jpg",
-          "A chat with Lelouch in Ryuu Aniverse, with an action line above his reply"
+          "A chat with Lelouch in Ryuu Aniverse v2, with an action line above his reply and his portrait beside it"
         ]
       ],
       "stack": "Java · JavaFX · Ollama · Llama-3 8B · phi4-mini",
