@@ -357,8 +357,8 @@ window.DATA = {
     [6, 'PEER Life Support and First Aid', 'Beyond code', 'ALERT NGO', 'Oct 2025'],
     [3, 'Google AI Essentials', 'AI', 'Google and Coursera', 'Apr 2025', 'https://coursera.org/verify/PZKJWB56XLKV'],
     [4, 'AI for Youth', 'AI', 'Intel and CBSE', 'Nov 2024'],
-    [11, 'Cambridge English, B2, score 167', 'Beyond code', 'Cambridge English', 'Jul 2024', 'https://cambridgeenglish.org/verifiers'],
-    [10, 'Cambridge English certificate', 'Beyond code', 'Cambridge English', 'Jul 2024'],
+    /* One exam: the certificate and its statement of results share 10.pdf (2 pages). */
+    [10, 'Cambridge English, B2, score 167', 'Beyond code', 'Cambridge English', 'Jul 2024', 'https://cambridgeenglish.org/verifiers'],
     [2, 'AI Automation and Agents Expert', 'AI', 'Digital Scholar', ''],
     [17, 'Generative AI Expert', 'AI', 'Digital Scholar', ''],
     [20, 'Python Programming', 'Development', 'iamneo, KCT', ''],
