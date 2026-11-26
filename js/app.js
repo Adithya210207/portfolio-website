@@ -48,8 +48,23 @@
   workList.addEventListener('click', e => {
     const head = e.target.closest('.work__head'); if (!head) return;
     const item = head.parentElement, open = !item.classList.contains('is-open');
-    $$('.work__item', workList).forEach(li => { li.classList.remove('is-open'); $('.work__head', li).setAttribute('aria-expanded', 'false'); });
+    // A project open ABOVE the clicked one closes instantly, and the page scrolls by the height it lost,
+    // so the clicked project stays under the cursor and opens downward instead of sliding up the page.
+    const before = head.getBoundingClientRect().top;
+    $$('.work__item', workList).forEach(li => {
+      if (li === item || !li.classList.contains('is-open')) return;
+      const panel = $('.work__panel', li), above = li.compareDocumentPosition(item) & Node.DOCUMENT_POSITION_FOLLOWING;
+      if (above) panel.style.transition = 'none';
+      li.classList.remove('is-open'); $('.work__head', li).setAttribute('aria-expanded', 'false');
+      if (above) { void panel.offsetHeight; requestAnimationFrame(() => { panel.style.transition = ''; }); }
+    });
+    const shift = head.getBoundingClientRect().top - before;
+    if (Math.abs(shift) > 1) {
+      if (lenis) { lenis.resize(); lenis.scrollTo(lenis.scroll + shift, { immediate: true, force: true }); }
+      else window.scrollBy(0, shift);
+    }
     if (open) { item.classList.add('is-open'); head.setAttribute('aria-expanded', 'true'); }
+    else { item.classList.remove('is-open'); head.setAttribute('aria-expanded', 'false'); }
     setTimeout(refresh, 820);
   });
 
