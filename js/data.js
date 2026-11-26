@@ -23,6 +23,53 @@ window.DATA = {
       links: [['View the code', 'https://github.com/Adithya210207/tqq-chatbox'], ['See the models', 'https://huggingface.co/Adithya210207-Ryuu']]
     },
     {
+      "slug": "serene-mind-ai",
+      "page": {
+        "title": "Serene Mind AI — private offline mental-wellness companion for students | Adithya V",
+        "desc": "Serene Mind AI by Adithya V: an offline mental-wellness companion for college students, with two caring companions in English or Tanglish, its own fine-tuned model Serene_ryuu_v1 and a safety check on every reply.",
+        "about": [
+          "Serene Mind AI is a desktop companion for students who need someone to talk to about exams, sleep, loneliness or a heavy day. You choose Alpha, grounded like an elder brother, or Steffy, gentle like a best friend, and talk in English or Tanglish.",
+          "Replies come from Serene_ryuu_v1, my own Llama-3 8B model fine-tuned with LoRA on 266 chats to answer calmly, keep healthy boundaries and never name medicines or diagnoses. Word rules and a second AI judge, qwen3:8b, read every reply before you see it, and crisis words open a directory of Indian helplines at once.",
+          "Around the chat sit a daily mood check-in, a 14-day journey view, short memory notes you can see and delete, voice in and out, and a calm corner with breathing, grounding, a body scan and a sleep mode. Everything runs offline with no account and no server. Serene is not a doctor or a crisis service, and it says so."
+        ],
+        "related": [
+          "tqq-chatbox",
+          "ryuu-v1"
+        ]
+      },
+      "art": "chat",
+      "title": "Serene Mind AI",
+      "preview": "img/preview/serene.jpg",
+      "kind": "Wellness companion, own model",
+      "desc": "A private, offline companion for college students who need someone to talk to. Two caring companions speak English or Tanglish, run on my own fine-tuned model, and every reply is checked for safety before you see it.",
+      "facts": [
+        "Serene_ryuu_v1, a Llama-3 8B model fine-tuned with LoRA on 266 chats",
+        "Safe replies rose from 91 to 100 out of 100 in a blind test",
+        "Crisis words open Indian helplines at once, and nothing leaves the laptop"
+      ],
+      "shots": [
+        [
+          "img/work/serene-home.jpg",
+          "Serene Mind AI home screen with the two companions, Alpha and Steffy"
+        ],
+        [
+          "img/work/serene-calm.jpg",
+          "The calm corner in Serene Mind AI: breathing, grounding, a body scan and a sleep mode"
+        ]
+      ],
+      "stack": "Java · JavaFX · Ollama · Llama-3 8B · LoRA · Unsloth",
+      "links": [
+        [
+          "View the code",
+          "https://github.com/Adithya210207/ryuu-serene-mind-ai"
+        ],
+        [
+          "See the model",
+          "https://huggingface.co/Adithya210207-Ryuu/Serene_ryuu_v1-GGUF"
+        ]
+      ]
+    },
+    {
       slug: "ryuu-explainer-ai", page: {
         title: "Ryuu Explainer AI — private offline AI coding assistant | Adithya V",
         desc: "Ryuu Explainer AI by Adithya V: a private desktop AI that explains concepts, debugs code and writes it in any language, running on local models with Ollama, even on Intel Arc integrated graphics.",
@@ -39,6 +86,53 @@ window.DATA = {
       shots: [['img/work/ryuu-chat.jpg', 'Ryuu explaining recursion in Python with a worked factorial example, running on qwen2.5-coder 14B'], ['img/work/ryuu-home.jpg', 'Ryuu greeting a new chat, with model switching and saved conversations']],
       stack: 'Python · Tkinter · Ollama · Vulkan',
       links: [['View the code', 'https://github.com/Adithya210207/ryuu-explainer-ai']]
+    },
+    {
+      "slug": "hostel-management-system",
+      "page": {
+        "title": "Ryuu Hostel Management System — hostel website and portal in Next.js | Adithya V",
+        "desc": "Ryuu Hostel Management System by Adithya V: an animated hostel website and a full portal for admins, residents and guardians, covering admissions, beds, payments, meals, outpasses and notices. Next.js 16, React 19 and PostgreSQL, with a live demo.",
+        "about": [
+          "Ryuu Hostel Management System is a complete web system for a men's hostel: a public website that sells the stay, and a private portal that runs it day to day for admins, residents and guardians, each of whom sees only what they should.",
+          "It follows a resident from admission to checkout: apply online, get approved, pick a bed on an interactive map, pay within 48 hours, then live there with meal counts, attendance, outpasses, tickets and notices, and the guardian kept in the loop. Bills handle proration and penalties, and payment proof is reviewed by an admin.",
+          "It is built with Next.js 16, React 19 and TypeScript on PostgreSQL, installs as an app with push notifications, keeps uploads encrypted with an audit log, and refuses to start in production with weak settings. 65 automated tests cover it, and a live demo with synthetic data runs on Vercel."
+        ],
+        "related": [
+          "kct-idea-lab",
+          "pawfinder"
+        ]
+      },
+      "art": "window",
+      "title": "Ryuu Hostel Management System",
+      "preview": "img/preview/hostel.jpg",
+      "kind": "Web system, live demo",
+      "desc": "An animated hostel website and a full portal for admins, residents and guardians: admissions, beds, payments, meals, outpasses and notices in one place.",
+      "facts": [
+        "Three roles, each with its own dashboard and only its own data",
+        "Admission to checkout, with an interactive bed map and bill handling",
+        "Next.js 16, React 19 and PostgreSQL, with 65 automated tests"
+      ],
+      "shots": [
+        [
+          "img/work/hostel-home.jpg",
+          "The animated homepage of the Ryuu hostel website"
+        ],
+        [
+          "img/work/hostel-portal.jpg",
+          "The admin overview in the Ryuu hostel portal, with residents, payments, applications and outpasses"
+        ]
+      ],
+      "stack": "Next.js · React · TypeScript · PostgreSQL · PWA · Vercel",
+      "links": [
+        [
+          "Open the live demo",
+          "https://ryuu-hostel-demo.vercel.app"
+        ],
+        [
+          "View the code",
+          "https://github.com/Adithya210207/ryuu-hostel-management-system"
+        ]
+      ]
     },
     {
       slug: "kct-idea-lab", page: {
@@ -58,6 +152,49 @@ window.DATA = {
       links: [['Visit the site', 'https://idealab.kct.ac.in/']]
     },
     {
+      "slug": "aniverse-chatbox",
+      "page": {
+        "title": "Ryuu Aniverse — chat offline with 100 anime characters | Adithya V",
+        "desc": "Ryuu Aniverse by Adithya V: a local-AI JavaFX desktop app to chat with 100 anime characters from 41 series, with a knowledge pack per character and a judge that checks every reply. Unofficial, non-commercial fan project.",
+        "about": [
+          "Ryuu Aniverse is a private desktop app for chatting with 100 anime characters from 41 series, from Lelouch and Light to Gojo, Levi and Tanjiro. Each one is set at the end of their story, so they remember what they lived through.",
+          "Every character has a knowledge pack with personality, speech style, facts, relationships and canon events. One local model, Llama-3 8B Stheno, becomes each character through a prompt built from that pack, with no fine-tuning per character.",
+          "A phi4-mini judge and word rules read every reply for staying in character, getting facts and relationships right and keeping romance sweet and never explicit, and rewrite it when it slips. It runs fully offline. Ryuu Aniverse is an unofficial, non-commercial fan project; the characters belong to their creators."
+        ],
+        "related": [
+          "tqq-chatbox",
+          "personality-ai-chatbox"
+        ]
+      },
+      "art": "duo",
+      "title": "Ryuu Aniverse",
+      "preview": "img/preview/aniverse.jpg",
+      "kind": "Character chat, 100 characters",
+      "desc": "Chat with 100 anime characters from 41 series on your own computer. One local model plays each of them from their own knowledge pack, and a judge checks every reply for character and facts.",
+      "facts": [
+        "100 characters from 41 series, each with a knowledge pack",
+        "A phi4-mini judge rewrites replies that break character or get facts wrong",
+        "Fully offline, with a profile of you for every character"
+      ],
+      "shots": [
+        [
+          "img/work/aniverse-home.jpg",
+          "The Ryuu Aniverse home screen with character panels and the gallery of all characters"
+        ],
+        [
+          "img/work/aniverse-chat.jpg",
+          "A chat with Lelouch in Ryuu Aniverse, with an action line above his reply"
+        ]
+      ],
+      "stack": "Java · JavaFX · Ollama · Llama-3 8B · phi4-mini",
+      "links": [
+        [
+          "View the code",
+          "https://github.com/Adithya210207/Ryuu-Aniverse-Chatbox"
+        ]
+      ]
+    },
+    {
       slug: "personality-ai-chatbox", page: {
         title: "Personality AI Chatbox — anime character AI chatbot | Adithya V",
         desc: "Personality AI Chatbox by Adithya V: an offline anime character chatbot with five personas, each with its own voice, theme and avatar, a two-character Trio Chat and live streaming replies from a local model.",
@@ -74,6 +211,49 @@ window.DATA = {
       crop: true, shots: [['img/work/persona-rem.jpg', 'Chatting with Rem in Personality AI, with her portrait and bond status beside the conversation'], ['img/work/persona-lelouch.jpg', 'Chatting with Lelouch in Personality AI, with his strategic alignment panel']],
       stack: 'Python · Tkinter · Ollama',
       links: [['View the code', 'https://github.com/Adithya210207/personality-ai-chatbot']]
+    },
+    {
+      "slug": "smartpickup",
+      "page": {
+        "title": "Ryuu SmartPickup — order food on your way in Coimbatore | Adithya V",
+        "desc": "Ryuu SmartPickup by Adithya V: a JavaFX prototype of a smart food pickup app for Coimbatore that lists restaurants along your route on an offline map and times the kitchen to your arrival.",
+        "about": [
+          "Ryuu SmartPickup is a desktop prototype of a startup idea: people often pay for delivery only because they don't want to wait at the counter. Here you set where you are going, order from a restaurant on the way, and the kitchen starts cooking so the food is ready when you walk in.",
+          "The whole Coimbatore district map, from Mettupalayam to Valparai, is built into the app from OpenStreetMap, along with its own route finder. Restaurants within about 650 metres of your road are listed in the order you pass them, with the detour and the time you will reach each.",
+          "It holds 297 real Coimbatore restaurants with their areas, ratings and dishes, and has both sides of the order: a customer app with a pickup pass, and a kitchen display that sorts tickets by when each customer will arrive."
+        ],
+        "related": [
+          "pawfinder",
+          "hostel-management-system"
+        ]
+      },
+      "art": "gauge",
+      "title": "Ryuu SmartPickup",
+      "preview": "img/preview/smartpickup.jpg",
+      "kind": "Startup prototype",
+      "desc": "Order ahead, skip the wait, pick up on your way. A food pickup app for Coimbatore that finds restaurants along your route and times the kitchen to the moment you arrive.",
+      "facts": [
+        "An offline map of the whole Coimbatore district with its own route finder",
+        "297 real Coimbatore restaurants, listed in the order you pass them",
+        "A customer app and a kitchen display that cooks to your arrival time"
+      ],
+      "shots": [
+        [
+          "img/work/smartpickup-discover.jpg",
+          "SmartPickup discover screen: restaurants on the way from Saibaba Colony to Coimbatore Airport"
+        ],
+        [
+          "img/work/smartpickup-route.jpg",
+          "SmartPickup route screen: the offline map with every restaurant along the road"
+        ]
+      ],
+      "stack": "Java · JavaFX · OpenStreetMap",
+      "links": [
+        [
+          "View the code",
+          "https://github.com/Adithya210207/ryuu-smartpickup"
+        ]
+      ]
     },
     {
       slug: "pawfinder", page: {
@@ -131,19 +311,19 @@ window.DATA = {
     },
     {
       slug: "ryuu-v1", page: {
-        title: "ryuu_v1 — five fine-tuned Llama-3 8B GGUF models on Hugging Face | Adithya V",
-        desc: "The ryuu_v1 models by Adithya V: Ichika_ryuu_v1, Nino_ryuu_v1, Miku_ryuu_v1, Yotsuba_ryuu_v1 and Itsuki_ryuu_v1, fine-tuned Llama-3 8B character models published as GGUF files for Ollama.",
+        title: "ryuu_v1 — six fine-tuned Llama-3 8B GGUF models on Hugging Face | Adithya V",
+        desc: "The ryuu_v1 models by Adithya V: Ichika_ryuu_v1, Nino_ryuu_v1, Miku_ryuu_v1, Yotsuba_ryuu_v1, Itsuki_ryuu_v1 and Serene_ryuu_v1, fine-tuned Llama-3 8B models published as GGUF files for Ollama.",
         about: [
-          "ryuu_v1 is the set of five character models behind TQQ Chatbox: Ichika_ryuu_v1, Nino_ryuu_v1, Miku_ryuu_v1, Yotsuba_ryuu_v1 and Itsuki_ryuu_v1, one for each of the Nakano sisters from The Quintessential Quintuplets.",
-          "Each is a Llama-3 8B model (built on Stheno v3.2) fine-tuned with QLoRA on 700 to 890 chats, then merged and exported as an 8.5 GB Q8_0 GGUF file.",
+          "ryuu_v1 is my set of fine-tuned models. Five are the characters behind TQQ Chatbox: Ichika_ryuu_v1, Nino_ryuu_v1, Miku_ryuu_v1, Yotsuba_ryuu_v1 and Itsuki_ryuu_v1, one for each of the Nakano sisters from The Quintessential Quintuplets. The sixth, Serene_ryuu_v1, is the calm, safety-trained companion behind Serene Mind AI.",
+          "Each is a Llama-3 8B model (built on Stheno v3.2) fine-tuned with LoRA on Google Colab, the sisters on 700 to 890 chats each and Serene on 266, then merged and exported as an 8.5 GB Q8_0 GGUF file.",
           "They are public on Hugging Face under Adithya210207-Ryuu, and each one ships with its own Modelfile so it runs offline in Ollama."
         ],
-        related: ["tqq-chatbox","ryuu-explainer-ai"]
+        related: ["tqq-chatbox","serene-mind-ai"]
       },
-      art: 'layers', title: 'Ryuu v1 models', preview: 'img/preview/models.jpg', kind: 'Five open models',
-      desc: 'The five sisters from TQQ Chatbox, published on Hugging Face so that anyone can download them and run them offline.',
-      facts: ['Ichika, Nino, Miku, Yotsuba and Itsuki ryuu_v1', 'Llama-3 8B, merged and exported as 8.5 GB Q8_0 GGUF files', 'Each ships with its own Modelfile for Ollama'],
-      shots: [['img/work/models-hub.jpg', 'My Hugging Face page with the five ryuu_v1 models'], ['img/work/models-miku.jpg', 'The Miku_ryuu_v1 model card on Hugging Face']],
+      art: 'layers', title: 'Ryuu v1 models', preview: 'img/preview/models.jpg', kind: 'Six open models',
+      desc: 'The five sisters from TQQ Chatbox and Serene from Serene Mind AI, published on Hugging Face so that anyone can download them and run them offline.',
+      facts: ['Ichika, Nino, Miku, Yotsuba, Itsuki and Serene ryuu_v1', 'Llama-3 8B, merged and exported as 8.5 GB Q8_0 GGUF files', 'Each ships with its own Modelfile for Ollama'],
+      shots: [['img/work/models-hub.jpg', 'My Hugging Face page with the ryuu_v1 models'], ['img/work/models-miku.jpg', 'The Miku_ryuu_v1 model card on Hugging Face']],
       stack: 'Hugging Face · GGUF · Ollama',
       links: [['Open the model hub', 'https://huggingface.co/Adithya210207-Ryuu']]
     }
@@ -151,7 +331,7 @@ window.DATA = {
 
   skills: [
     ['AI and models', ['Fine-tuning with QLoRA', 'Local LLMs with Ollama', 'Dataset building', 'Prompt design', 'AI agents and MCP', 'GGUF models']],
-    ['Web', ['HTML and CSS', 'JavaScript', 'React', 'Node.js and Express', 'MongoDB']],
+    ['Web', ['HTML and CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js and Express', 'PostgreSQL', 'MongoDB']],
     ['Firmware', ['ARM Cortex-M4', 'RTOS', 'Arduino C++', 'ADC, DAC, PWM, USART', 'Web Serial']],
     ['Foundations', ['Python', 'Java and JavaFX', 'C', 'Data structures and algorithms', 'Operating systems', 'Data analytics']],
     ['Beyond code', ['UI and UX design', 'Digital marketing', 'English, Cambridge B2', 'First aid']]
@@ -195,6 +375,7 @@ window.DATA = {
   journey: [
     ['Now', 'A one-person web team at the KCT IDEA Lab', 'In my third semester I designed, built and now maintain idealab.kct.ac.in on my own and handle its support.'],
     ['2026', 'Smart City Hackathon 2026', 'Helped conduct the IDEA Lab and IEEE Smart Cities hackathon on local urban challenges, from 8 August to 13 October, as its software builder, running the portal for problem statements, team registrations and submissions.'],
+    ['2026', 'Serene Mind AI and a sixth model', 'Fine-tuned Serene_ryuu_v1 to answer students calmly in English or Tanglish, with a safety judge on every reply, and shipped it in an offline wellness app.'],
     ['2026', 'Five fine-tuned models and TQQ Chatbox', 'Built datasets from every episode\'s subtitles plus hand-written chats, fine-tuned five Llama-3 8B models with QLoRA on Google Colab, and published them on Hugging Face inside an offline JavaFX app.'],
     ['2026', 'Firmware internship at Axiswin Technologies', 'Bare-metal firmware for an ARM Cortex-M4 intelligent battery monitor: RTOS tasks, PWM for electric vehicles, and GPIO, ADC, DAC and USART drivers.'],
     ['2026', 'A year of traineeships and workshops', 'Artificial intelligence, data analytics, full-stack MERN, UI/UX, digital marketing and finance with Maiyam, and two Yugam workshops on agentic AI and building LLMs from scratch.'],
